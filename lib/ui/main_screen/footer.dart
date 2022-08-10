@@ -20,6 +20,7 @@ class Footer extends StatelessWidget {
                 textStyle: AppStyles.header1,
                 backgroundColor: AppColors.green149202_1,
                 foregroundColor: AppColors.white,
+                
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),

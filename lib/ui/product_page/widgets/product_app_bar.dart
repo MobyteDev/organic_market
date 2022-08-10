@@ -35,7 +35,9 @@ class ProductAppBar extends StatelessWidget with PreferredSizeWidget {
               child: Image.asset(
                 "assets/icons/share.png",
               ),
-              onTap: () {},
+              onTap: () {
+                
+              },
             ),
             SizedBox(
               width: 17.w,
