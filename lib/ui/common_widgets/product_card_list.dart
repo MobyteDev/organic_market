@@ -18,18 +18,21 @@ class ProductCardList extends StatelessWidget {
       child: Column(
         children: [
           Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                title,
-                style: AppStyles.bigHeader,
-              )),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              title,
+              style: AppStyles.bigHeader,
+            ),
+          ),
+          SizedBox(height: 0.02.sh),
           SizedBox(
             height: 0.3.sh,
             child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, i) => ProductCard(product: products[i]),
                 separatorBuilder: (context, index) => SizedBox(width: 0.02.sw),
-                itemCount: products.length),
+                itemCount: products.length,
+                clipBehavior: Clip.none),
           ),
         ],
       ),

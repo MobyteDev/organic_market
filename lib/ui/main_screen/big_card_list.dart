@@ -15,14 +15,19 @@ class BigCardList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 0.3.sh,
-      child: ListView.separated(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView.separated(
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, i) => BigCard(
               color: AppColors.cardColors[i % AppColors.cardColors.length],
               offer: offers[i]),
           separatorBuilder: (context, index) => SizedBox(width: 0.02.sw),
-          itemCount: offers.length),
+          itemCount: offers.length,
+          clipBehavior: Clip.none,
+        ),
+      ),
     );
   }
 }

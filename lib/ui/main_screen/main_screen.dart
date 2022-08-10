@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/data/offer.dart';
 import 'package:organic_market/data/product.dart';
 import 'package:organic_market/data/product_category.dart';
@@ -20,8 +21,8 @@ class MainScreen extends StatelessWidget {
       appBar: OrganicAppBar(),
       body: SingleChildScrollView(
         child: Column(
-          children: const [
-            SizedBox(height: 10),
+          children: [
+            SizedBox(height: 0.04.sh),
             BigCardList(
               offers: <Offer>[
                 Offer(
@@ -89,6 +90,7 @@ class MainScreen extends StatelessWidget {
               ],
             ),
             Brands(),
+            SizedBox(height: 0.05.sh),
             Footer(),
           ],
         ),

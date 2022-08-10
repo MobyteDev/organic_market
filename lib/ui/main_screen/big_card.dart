@@ -52,7 +52,7 @@ class BigCard extends StatelessWidget {
                   ),
                   Text(offer.description, style: AppStyles.body1),
                   SizedBox(
-                    height: 0.08.sh,
+                    height: 0.06.sh,
                   ),
                   OutlinedButton(
                     onPressed: () {},

@@ -23,6 +23,7 @@ class CategoryList extends StatelessWidget {
                 "Популярные категории",
                 style: AppStyles.bigHeader,
               )),
+          SizedBox(height: 0.02.sh),
           SizedBox(
             height: 0.25.sw,
             child: ListView.separated(
