@@ -1,8 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/data/product.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../utils/app_router.gr.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({Key? key, required this.product}) : super(key: key);
@@ -60,6 +63,7 @@ class ProductCard extends StatelessWidget {
                   ),
                   onPressed: () {
                     //TODO
+                    context.router.push(ProductRoute(title: "Хер"));
                   },
                   child: const Icon(Icons.shopping_cart),
                 ), //TODO svg icon

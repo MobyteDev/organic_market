@@ -20,16 +20,10 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: OrganicAppBar(),
-      body: AutoTabsRouter.tabBar(
-        routes: [
-          ProductRoute(
-            title: "Говядина",
-          ),
-        ],
-        builder: (ctx, widget, controller) {
-          return SingleChildScrollView(
+    
+        return Scaffold(
+          appBar: OrganicAppBar(),
+          body: SingleChildScrollView(
             child: Column(
               children: [
                 SizedBox(height: 0.04.sh),
@@ -103,9 +97,7 @@ class MainScreen extends StatelessWidget {
                 Footer(),
               ],
             ),
-          );
-        },
-      ),
-    );
+          ),
+        );
   }
 }

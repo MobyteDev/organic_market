@@ -6,8 +6,7 @@ import 'package:organic_market/ui/common_widgets/category_card.dart';
 import '../../data/product_category.dart';
 
 class CategoryList extends StatelessWidget {
-  const CategoryList({Key? key, required this.categories})
-      : super(key: key);
+  const CategoryList({Key? key, required this.categories}) : super(key: key);
 
   final List<ProductCategory> categories;
 
@@ -27,17 +26,21 @@ class CategoryList extends StatelessWidget {
           SizedBox(
             height: 0.25.sw,
             child: ListView.separated(
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, i) => CategoryCard(category: categories[i], width: 0.25.sw),
-                separatorBuilder: (context, index) => SizedBox(width: 0.02.sw),
-                itemCount: categories.length,
-                clipBehavior: Clip.none,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, i) => CategoryCard(
+                category: categories[i],
+                width: 0.25.sw,
+                onTap: () {
+                  // context.r
+                },
+              ),
+              separatorBuilder: (context, index) => SizedBox(width: 0.02.sw),
+              itemCount: categories.length,
+              clipBehavior: Clip.none,
             ),
-
           ),
         ],
       ),
     );
   }
-
 }

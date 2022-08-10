@@ -37,15 +37,15 @@ class AutoRouter extends _i3.RootStackRouter {
 
   @override
   List<_i3.RouteConfig> get routes => [
-        _i3.RouteConfig(MainScreen.name, path: '/main-screen'),
-        _i3.RouteConfig(ProductRoute.name, path: '/')
+        _i3.RouteConfig(MainScreen.name, path: '/'),
+        _i3.RouteConfig(ProductRoute.name, path: '/product')
       ];
 }
 
 /// generated route for
 /// [_i1.MainScreen]
 class MainScreen extends _i3.PageRouteInfo<void> {
-  const MainScreen() : super(MainScreen.name, path: '/main-screen');
+  const MainScreen() : super(MainScreen.name, path: '/');
 
   static const String name = 'MainScreen';
 }
@@ -55,7 +55,7 @@ class MainScreen extends _i3.PageRouteInfo<void> {
 class ProductRoute extends _i3.PageRouteInfo<ProductRouteArgs> {
   ProductRoute({_i4.Key? key, required String title})
       : super(ProductRoute.name,
-            path: '/', args: ProductRouteArgs(key: key, title: title));
+            path: '/product', args: ProductRouteArgs(key: key, title: title));
 
   static const String name = 'ProductRoute';
 }
