@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/ui/main_screen/main_screen.dart';
+import 'package:organic_market/ui/order_making_screen/order_making_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         ),
         primarySwatch: Colors.blue,
       ),
-      home: const MainScreen(),
+      home: const OrderMakingScreen(),
     );
   }
 }
