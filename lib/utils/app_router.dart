@@ -7,13 +7,13 @@ import '../ui/main_screen/main_screen.dart';
   routes: [
     MaterialRoute(
       page: MainScreen,
-      
+      initial: true,
     ),
     MaterialRoute(
       page: ProductPage,
-      // path: '/product'
-      initial: true,
+      path: '/product'
       
+
     ),
   ],
   replaceInRouteName: 'Page,Route',
