@@ -17,49 +17,32 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return ScreenUtilInit(
-    //   designSize: const Size(360, 690),
-    //   minTextAdapt: true,
-    //   splitScreenMode: true,
-    //   builder: (_, __) {
-    //     return MaterialApp.router(
-    //       title: 'Flutter Demo',
-    //       theme: ThemeData(
-    //         appBarTheme: const AppBarTheme(
-    //           centerTitle: true,
-    //           shape: RoundedRectangleBorder(
-    //             borderRadius: BorderRadius.only(
-    //               bottomRight: Radius.circular(15),
-    //               bottomLeft: Radius.circular(15),
-    //             ),
-    //           ),
-    //           backgroundColor: AppColors.white,
-    //         ),
-    //         // fontFamily: "Jost",
-    //         primarySwatch: Colors.blue,
-    //       ),
-    //       routerDelegate: appRouter.delegate(),
-    //       routeInformationParser: appRouter.defaultRouteParser(),
-    //       debugShowCheckedModeBanner: false,
-    //     );
-    //   },
-    // );
-    return MaterialApp(
-      home: OrderMakingPage(),
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          centerTitle: true,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              bottomRight: Radius.circular(15),
-              bottomLeft: Radius.circular(15),
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_, __) {
+        return MaterialApp.router(
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            appBarTheme: const AppBarTheme(
+              centerTitle: true,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(15),
+                  bottomLeft: Radius.circular(15),
+                ),
+              ),
+              backgroundColor: AppColors.white,
             ),
+            // fontFamily: "Jost",
+            primarySwatch: Colors.blue,
           ),
-          backgroundColor: AppColors.white,
-        ),
-        // fontFamily: "Jost",
-        primarySwatch: Colors.blue,
-      ),
+          routerDelegate: appRouter.delegate(),
+          routeInformationParser: appRouter.defaultRouteParser(),
+          debugShowCheckedModeBanner: false,
+        );
+      },
     );
   }
 }
