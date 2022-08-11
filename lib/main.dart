@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
+import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/ui/main_screen/main_screen.dart';
 import 'package:organic_market/ui/order_making_page/order_making_page.dart';
 import 'package:organic_market/ui/product_page/product_page.dart';
@@ -25,15 +26,17 @@ class MyApp extends StatelessWidget {
         return MaterialApp.router(
           title: 'Flutter Demo',
           theme: ThemeData(
-            appBarTheme: const AppBarTheme(
+            appBarTheme:  AppBarTheme(
               centerTitle: true,
+              elevation: 0,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
-                  bottomRight: Radius.circular(15),
-                  bottomLeft: Radius.circular(15),
+                  bottomRight: Radius.circular(10),
+                  bottomLeft: Radius.circular(10),
                 ),
               ),
               backgroundColor: AppColors.white,
+              titleTextStyle: AppStyles.header5,
             ),
             // fontFamily: "Jost",
             primarySwatch: Colors.blue,

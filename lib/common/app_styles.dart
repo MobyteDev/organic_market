@@ -18,5 +18,5 @@ class AppStyles {
   static const TextStyle header2 = TextStyle(fontFamily: 'Jost', fontSize: 16, fontWeight: FontWeight.w500);
   static const TextStyle header3 = TextStyle(fontFamily: 'Jost', fontSize: 14, fontWeight: FontWeight.w500);
   static const TextStyle header4 = TextStyle(fontFamily: 'Jost', fontSize: 26, fontWeight: FontWeight.w600);
-
+  static const TextStyle header5 = TextStyle(fontFamily: 'Jost', fontSize: 17, fontWeight: FontWeight.w600, color: AppColors.black);
 }
