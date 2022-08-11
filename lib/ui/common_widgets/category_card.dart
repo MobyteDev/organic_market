@@ -1,5 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/data/product_category.dart';
@@ -37,13 +37,22 @@ class CategoryCard extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.topLeft,
-            child: Image.asset(category.image),
+            child: Padding(
+              padding: const EdgeInsets.all(3.0),
+              child: SizedBox(height: 80.h, child: Image.asset(category.image)),
+            ),
           ),
           Align(
             alignment: Alignment.bottomLeft,
-            child: Text(
-              category.name,
-              style: AppStyles.body2,
+            child: Padding(
+              padding: const EdgeInsets.all(3.0),
+              child: SizedBox(
+                width: 90.w,
+                child: Text(
+                  category.name,
+                  style: AppStyles.body2,
+                ),
+              ),
             ),
           ),
         ],
