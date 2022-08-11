@@ -15,4 +15,5 @@ class AppColors {
   // rgba(242, 243, 240, 1)
   static const Color grey242243240_1 = Color.fromRGBO(242, 243, 240, 1);
   static const Color grey142144150_1 = Color.fromRGBO(142, 144, 150, 1);
+  static const Color grey223215215_1 = Color.fromRGBO(223, 215, 215, 1);
 }

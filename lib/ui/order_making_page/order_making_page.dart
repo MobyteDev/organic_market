@@ -9,6 +9,7 @@ import 'package:organic_market/ui/order_making_page/widgets/custom_text_field.da
 import 'package:organic_market/ui/order_making_page/widgets/order_making_list_tile.dart';
 import 'package:organic_market/ui/order_making_page/widgets/price_row.dart';
 import 'package:organic_market/ui/order_success_page.dart/order_success_page.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OrderMakingPage extends StatefulWidget {
   const OrderMakingPage({Key? key}) : super(key: key);
@@ -94,7 +95,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
               subtitle: _address,
             ),
           ),
-          const SizedBox(height: 15),
+          SizedBox(height: 15),
           OrderMakingListTile(
             title: 'Дата и время доставки',
             subtitle: '$_date в $_time',
@@ -117,7 +118,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
                     const SizedBox(width: 5),
                     Icon(
                       Icons.help,
-                      color: AppColors.grey242243240_1,
+                      color: AppColors.grey223215215_1,
                       size: 23,
                     ),
                   ],
