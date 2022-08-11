@@ -1,0 +1,3 @@
+class GeopositionService {
+  // Future<Poition>
+}
