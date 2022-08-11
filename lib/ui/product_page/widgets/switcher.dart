@@ -93,7 +93,10 @@ class _SwitcherState extends State<Switcher>
                       ),
                       children: [
                         TextSpan(
-                          text: discounts[0],
+                          text: discounts[0] != "" ? ' - ${discounts[0]}%' : "",
+                          style: const TextStyle(
+                            color: AppColors.red,
+                          ),
                         ),
                       ],
                     ),
@@ -120,9 +123,9 @@ class _SwitcherState extends State<Switcher>
                     ),
                     children: [
                       TextSpan(
-                        text: discounts[1],
-                        style: TextStyle(
-                          color: AppColors
+                        text: discounts[1] != "" ? ' - ${discounts[1]}%' : "",
+                        style: const TextStyle(
+                          color: AppColors.red,
                         ),
                       ),
                     ],

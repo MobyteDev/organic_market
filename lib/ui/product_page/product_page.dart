@@ -50,6 +50,7 @@ class ProductPage extends StatelessWidget {
                 ), 
                  Switcher(
                   values: ["0,4кг", "1,2кг"],
+                  discountsValues: ["", "20"],
                 ),
               ],
             ),
