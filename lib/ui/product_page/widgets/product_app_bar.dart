@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
@@ -26,7 +27,9 @@ class ProductAppBar extends StatelessWidget with PreferredSizeWidget {
         child: Image.asset(
           "assets/icons/back.png",
         ),
-        onTap: () {},
+        onTap: () {
+          context.router.pop();
+        },
       ),
       actions: [
         Row(

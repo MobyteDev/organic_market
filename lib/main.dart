@@ -22,9 +22,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, __) {
-
         return MaterialApp.router(
-
           title: 'Flutter Demo',
           theme: ThemeData(
             appBarTheme: const AppBarTheme(

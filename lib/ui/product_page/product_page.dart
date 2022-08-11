@@ -5,7 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/ui/product_page/widgets/features.dart';
 import 'package:organic_market/ui/product_page/widgets/product_app_bar.dart';
-import 'package:organic_market/ui/product_page/widgets/product_switch.dart';
+import 'package:organic_market/ui/product_page/widgets/product_delivery.dart';
+import 'package:organic_market/ui/product_page/widgets/switcher.dart';
 
 class ProductPage extends StatelessWidget {
   final String title;
@@ -35,33 +36,19 @@ class ProductPage extends StatelessWidget {
                 SizedBox(
                   height: 16.h,
                 ),
-                
                 Text(
                   title,
                 ),
                 SizedBox(
                   height: 36.h,
                 ),
-                Row(
-                  children: [
-                    Image.asset(  
-                      "assets/icons/green_car.png",
-                    ),
-                    SizedBox(
-                      width: 9.h,
-                    ),
-                    const Text(
-                      "Ближайшая дата доставки: завтра",
-                      style: TextStyle(
-                        color: AppColors.green149202_1,
-                      ),
-                    ),
-                  ],
+                const ProductDelivery(
+                  deliveryTerm: "завтра",
                 ),
                 SizedBox(
                   height: 36.h,
-                ),
-                const ProductSwitch(
+                ), 
+                 Switcher(
                   values: ["0,4кг", "1,2кг"],
                 ),
               ],

@@ -8,12 +8,6 @@ import '../ui/main_screen/main_screen.dart';
     MaterialRoute(
       page: MainScreen,
       initial: true,
-      // children: [
-      //   MaterialRoute(
-      //     page: ProductPage,
-      //     path: 'product',
-      //   ),
-      // ],
     ),
     MaterialRoute(page: ProductPage, path: '/product'),
   ],
