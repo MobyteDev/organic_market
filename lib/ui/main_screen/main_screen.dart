@@ -67,6 +67,7 @@ class MainScreen extends StatelessWidget {
                       "Молочные продукты, яйцо", "assets/images/category.png")
                 ]),
                 ProductCardList(
+                  isTitled: true,
                   title: "Лучшие предложения",
                   products: [
                     Product("Масло сливочное Традиционное", 0.35, 329,
@@ -80,6 +81,7 @@ class MainScreen extends StatelessWidget {
                   ],
                 ),
                 ProductCardList(
+                  isTitled: true,
                   title: "Уже покупали",
                   products: [
                     Product("Масло сливочное Традиционное", 0.35, 329,

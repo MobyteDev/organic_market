@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ProductAppBar extends StatelessWidget with PreferredSizeWidget {
   const ProductAppBar({
@@ -39,7 +40,7 @@ class ProductAppBar extends StatelessWidget with PreferredSizeWidget {
                 "assets/icons/share.png",
               ),
               onTap: () {
-                
+                Share.share("text");
               },
             ),
             SizedBox(
