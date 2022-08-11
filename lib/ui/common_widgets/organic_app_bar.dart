@@ -9,11 +9,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class OrganicAppBar extends StatelessWidget with PreferredSizeWidget {
   final String title;
   final Widget? prefixIcon;
+  final bool isBack;
+  final List<Widget>? actions;
 
   const OrganicAppBar({
     Key? key,
     required this.title,
     this.prefixIcon,
+    this.isBack = false,
+    this.actions,
   }) : super(key: key);
 
   @override
@@ -28,8 +32,8 @@ class OrganicAppBar extends StatelessWidget with PreferredSizeWidget {
             boxShadow: [
               BoxShadow(
                 color: Color.fromRGBO(240, 234, 234, 1),
-                spreadRadius: 10.r,
-                blurRadius: 15.r,
+                spreadRadius: 10,
+                blurRadius: 15,
               ),
             ],
           ),
@@ -39,10 +43,23 @@ class OrganicAppBar extends StatelessWidget with PreferredSizeWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               prefixIcon != null ? prefixIcon! : Container(),
-              SizedBox(width: 10.w),
+              SizedBox(width: 10),
               Text(title),
             ],
           ),
+          leading: isBack
+              ? Icon(
+                  Icons.arrow_back_ios,
+                  color: AppColors.grey209204204_1,
+                  size: 20,
+                )
+              : actions != null
+                  ? SizedBox(width: 56)
+                  : null,
+          actions: actions ??
+              [
+                isBack ? SizedBox(width: 56) : Container(),
+              ],
         ),
       ],
     );

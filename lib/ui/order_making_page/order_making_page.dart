@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/data/address_settings.dart';
+import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/order_making_page/widgets/addresses_list.dart';
 import 'package:organic_market/ui/order_making_page/widgets/custom_bottom_bar.dart';
 import 'package:organic_market/ui/order_making_page/widgets/custom_switch.dart';
@@ -67,17 +68,9 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        shadowColor: Colors.grey[200],
-        title: const Text(
-          'Оформление заказа',
-          style: TextStyle(
-            fontFamily: 'Jost',
-            color: AppColors.black,
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+      appBar: OrganicAppBar(
+        title: 'Оформление заказа',
+        isBack: true,
       ),
       bottomNavigationBar: CustomBottomBar(
         buttonLabel: 'Оформить заказ',

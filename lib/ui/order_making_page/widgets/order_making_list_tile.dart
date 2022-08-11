@@ -38,7 +38,7 @@ class OrderMakingListTile extends StatelessWidget {
           Icon(
             Icons.arrow_forward_ios,
             size: 20,
-            color: AppColors.grey142144150_1,
+            color: AppColors.grey209204204_1,
           ),
         ],
       ),

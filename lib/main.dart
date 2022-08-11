@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               backgroundColor: AppColors.white,
-              titleTextStyle: AppStyles.header5,
+              titleTextStyle: AppStyles.header1,
             ),
             // fontFamily: "Jost",
             primarySwatch: Colors.blue,
@@ -47,5 +47,24 @@ class MyApp extends StatelessWidget {
         );
       },
     );
+    // return MaterialApp(
+    //   theme: ThemeData(
+    //     appBarTheme: AppBarTheme(
+    //       centerTitle: true,
+    //       elevation: 0,
+    //       shape: RoundedRectangleBorder(
+    //         borderRadius: BorderRadius.only(
+    //           bottomRight: Radius.circular(10),
+    //           bottomLeft: Radius.circular(10),
+    //         ),
+    //       ),
+    //       backgroundColor: AppColors.white,
+    //       titleTextStyle: AppStyles.header1,
+    //     ),
+    //     // fontFamily: "Jost",
+    //     primarySwatch: Colors.blue,
+    //   ),
+    //   home: OrderMakingPage(),
+    // );
   }
 }
