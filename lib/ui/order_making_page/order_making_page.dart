@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:organic_market/common/models/address_settings.dart';
-import 'package:organic_market/ui/order_making_page/addresses_list.dart';
-import 'package:organic_market/ui/order_making_page/custom_bottom_sheet.dart';
-import 'package:organic_market/ui/order_making_page/custom_switch.dart';
-import 'package:organic_market/ui/order_making_page/custom_text_field.dart';
-import 'package:organic_market/ui/order_making_page/order_making_list_tile.dart';
-import 'package:organic_market/ui/order_making_page/text_row.dart';
+import 'package:organic_market/common/app_colors.dart';
+import 'package:organic_market/common/app_styles.dart';
+import 'package:organic_market/data/address_settings.dart';
+import 'package:organic_market/ui/order_making_page/widgets/addresses_list.dart';
+import 'package:organic_market/ui/order_making_page/widgets/custom_bottom_bar.dart';
+import 'package:organic_market/ui/order_making_page/widgets/custom_switch.dart';
+import 'package:organic_market/ui/order_making_page/widgets/custom_text_field.dart';
+import 'package:organic_market/ui/order_making_page/widgets/order_making_list_tile.dart';
+import 'package:organic_market/ui/order_making_page/widgets/price_row.dart';
 import 'package:organic_market/ui/order_success_page.dart/order_success_page.dart';
 
 class OrderMakingPage extends StatefulWidget {
@@ -46,7 +48,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
   void _onTapAddresses() {
     showModalBottomSheet(
       context: context,
-      backgroundColor: Colors.transparent,
+      backgroundColor: AppColors.transparent,
       builder: (context) {
         return AddressesList(addressSetingsList: _addressSettingsList);
       },
@@ -69,8 +71,10 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
         title: const Text(
           'Оформление заказа',
           style: TextStyle(
-            color: Colors.black,
-            fontSize: 17,
+            fontFamily: 'Jost',
+            color: AppColors.black,
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -108,14 +112,12 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
                   children: [
                     const Text(
                       'Списать баллы',
-                      style: TextStyle(
-                        fontSize: 17,
-                      ),
+                      style: AppStyles.body3,
                     ),
                     const SizedBox(width: 5),
                     Icon(
                       Icons.help,
-                      color: Colors.grey[350],
+                      color: AppColors.grey242243240_1,
                       size: 23,
                     ),
                   ],
@@ -138,32 +140,32 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
             labelText: 'Комментарий',
             controller: _controller,
           ),
-          const SizedBox(height: 20),
-          TextRow(
+          const SizedBox(height: 10),
+          PriceRow(
             title: '$_goodsNumber товара',
-            titleColor: Colors.grey,
+            titleColor: AppColors.grey142144150_1,
             value: '$_price ₽',
           ),
-          const SizedBox(height: 10),
-          TextRow(
+          const SizedBox(height: 5),
+          PriceRow(
             title: 'Скидка $_sale%',
-            titleColor: Colors.red,
+            titleColor: AppColors.red,
             value: '-$_salePrice ₽',
-            valueColor: Colors.red,
+            valueColor: AppColors.red,
           ),
-          const SizedBox(height: 10),
-          TextRow(
+          const SizedBox(height: 5),
+          PriceRow(
             title: 'Доставка',
-            titleColor: Colors.grey,
+            titleColor: AppColors.grey142144150_1,
             value: '$_deliveryPrice ₽',
           ),
-          const SizedBox(height: 20),
-          TextRow(
+          const SizedBox(height: 15),
+          PriceRow(
             title: 'Итого',
-            titleSize: 24,
+            titleSize: 25,
             titleWeight: FontWeight.bold,
             value: '$_finalPrice ₽',
-            valueSize: 25,
+            valueSize: 26,
             valueWeight: FontWeight.bold,
           ),
         ],

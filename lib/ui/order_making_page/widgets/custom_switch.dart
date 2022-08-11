@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:organic_market/common/app_colors.dart';
 
 class CustomSwitch extends StatelessWidget {
   final bool value;
@@ -19,8 +20,8 @@ class CustomSwitch extends StatelessWidget {
       toggleSize: 15,
       borderRadius: 20,
       padding: 5,
-      inactiveColor: Colors.grey[200]!,
-      activeColor: Colors.lightGreenAccent[700]!,
+      inactiveColor: AppColors.grey242243240_1,
+      activeColor: AppColors.green149202_1,
       value: value,
       onToggle: onChanged,
     );

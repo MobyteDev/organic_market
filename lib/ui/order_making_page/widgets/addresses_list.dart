@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:organic_market/common/models/address_settings.dart';
-import 'package:organic_market/ui/order_making_page/addresses_list_tile.dart';
+import 'package:organic_market/common/app_colors.dart';
+import 'package:organic_market/data/address_settings.dart';
+import 'package:organic_market/ui/order_making_page/widgets/addresses_list_tile.dart';
 
 class AddressesList extends StatefulWidget {
   final List<AddressSettings> addressSetingsList;
@@ -52,14 +53,14 @@ class _AddressesListState extends State<AddressesList> {
             children: [
               Icon(
                 Icons.add,
-                color: Colors.lightGreenAccent[700],
+                color: AppColors.green149202_1,
               ),
               const SizedBox(width: 5),
               Text(
                 'Добавить адрес',
                 style: TextStyle(
                   fontSize: 18,
-                  color: Colors.lightGreenAccent[700],
+                  color: AppColors.green149202_1,
                   fontWeight: FontWeight.bold,
                 ),
               )
@@ -76,7 +77,7 @@ class _AddressesListState extends State<AddressesList> {
       child: Container(
         height: 5,
         decoration: BoxDecoration(
-          color: Colors.grey[300],
+          color: AppColors.grey242243240_1,
           borderRadius: const BorderRadius.all(Radius.circular(2.5)),
         ),
       ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:organic_market/common/app_colors.dart';
+import 'package:organic_market/common/app_styles.dart';
 
 class CustomTextField extends StatelessWidget {
   final String labelText;
@@ -28,10 +30,7 @@ class CustomTextField extends StatelessWidget {
           filled: true,
           fillColor: Colors.grey[200],
           labelText: labelText,
-          labelStyle: const TextStyle(
-            color: Colors.grey,
-            fontSize: 17,
-          ),
+          labelStyle: AppStyles.bodyGrey3,
         ),
       ),
     );

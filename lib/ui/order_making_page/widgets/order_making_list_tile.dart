@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:organic_market/common/app_colors.dart';
+import 'package:organic_market/common/app_styles.dart';
 
 class OrderMakingListTile extends StatelessWidget {
   final String title;
@@ -13,7 +15,7 @@ class OrderMakingListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey.withOpacity(0.1),
+      color: AppColors.grey242243240_1,
       padding: const EdgeInsets.all(15),
       child: Row(
         children: [
@@ -23,18 +25,12 @@ class OrderMakingListTile extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
-                    fontSize: 15,
-                    color: Colors.grey,
-                  ),
+                  style: AppStyles.bodyGrey2,
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 3),
                 Text(
                   subtitle,
-                  style: const TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: AppStyles.header1,
                 ),
               ],
             ),
@@ -42,7 +38,7 @@ class OrderMakingListTile extends StatelessWidget {
           Icon(
             Icons.arrow_forward_ios,
             size: 20,
-            color: Colors.grey[400],
+            color: AppColors.grey142144150_1,
           ),
         ],
       ),

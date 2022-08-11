@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/ui/common_widgets/custom_button.dart';
 import 'package:organic_market/ui/order_success_page.dart/order_success_page.dart';
 
@@ -19,7 +20,7 @@ class CustomBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 155,
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -51,16 +52,12 @@ class CustomBottomBar extends StatelessWidget {
           Text(
             label,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Colors.grey,
-            ),
+            style: AppStyles.bodyGrey2,
           ),
           Text(
             textButtonLabel,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.lightGreenAccent[700],
-            ),
+            style: AppStyles.bodyGreen2,
           ),
         ],
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:organic_market/common/app_colors.dart';
 
-class TextRow extends StatelessWidget {
+class PriceRow extends StatelessWidget {
   final String title;
   final double titleSize;
   final Color titleColor;
@@ -10,14 +11,14 @@ class TextRow extends StatelessWidget {
   final Color valueColor;
   final FontWeight valueWeight;
 
-  const TextRow({
+  const PriceRow({
     Key? key,
     required this.title,
     required this.value,
-    this.titleSize = 18,
-    this.valueSize = 19,
-    this.titleColor = Colors.black,
-    this.valueColor = Colors.black,
+    this.titleSize = 20,
+    this.valueSize = 21,
+    this.titleColor = AppColors.black,
+    this.valueColor = AppColors.black,
     this.titleWeight = FontWeight.normal,
     this.valueWeight = FontWeight.normal,
   }) : super(key: key);
@@ -30,6 +31,7 @@ class TextRow extends StatelessWidget {
           child: Text(
             title,
             style: TextStyle(
+              fontFamily: 'Jost',
               fontSize: titleSize,
               color: titleColor,
               fontWeight: titleWeight,
@@ -39,6 +41,7 @@ class TextRow extends StatelessWidget {
         Text(
           value,
           style: TextStyle(
+            fontFamily: 'Jost',
             fontSize: valueSize,
             color: valueColor,
             fontWeight: valueWeight,

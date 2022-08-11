@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:organic_market/common/models/address_settings.dart';
+import 'package:organic_market/common/app_colors.dart';
+import 'package:organic_market/data/address_settings.dart';
 
 class AddressesListTile extends StatelessWidget {
   final AddressSettings addressSettings;
@@ -40,13 +41,13 @@ class AddressesListTile extends StatelessWidget {
             addressSettings.isSelected
                 ? Icon(
                     Icons.check,
-                    color: Colors.lightGreenAccent[700],
+                    color: AppColors.green149202_1,
                   )
                 : Container(),
           ],
         ),
         Divider(
-          color: Colors.grey[300],
+          color: AppColors.grey242243240_1,
           height: 20,
           thickness: 1,
         ),

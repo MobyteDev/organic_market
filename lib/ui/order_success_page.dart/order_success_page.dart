@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:organic_market/common/app_colors.dart';
+import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/ui/common_widgets/custom_button.dart';
 
 class OrderSuccessPage extends StatelessWidget {
@@ -15,8 +17,10 @@ class OrderSuccessPage extends StatelessWidget {
         title: const Text(
           'Корзина',
           style: TextStyle(
-            color: Colors.black,
-            fontSize: 17,
+            fontFamily: 'Jost',
+            color: AppColors.black,
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -26,43 +30,30 @@ class OrderSuccessPage extends StatelessWidget {
           children: [
             const Text(
               'Заказ успешно оформлен',
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
+              style: AppStyles.header4,
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 10),
             Text(
-              'Номер заказа $_orderNumber',
-              style: TextStyle(
-                fontSize: 17,
-                color: Colors.grey[600],
-              ),
+              'Номер заказа: $_orderNumber',
+              style: AppStyles.bodyGrey1,
             ),
             const SizedBox(height: 5),
             Text(
               '$_goodsNumber товара на сумму $_price ₽',
-              style: TextStyle(
-                fontSize: 17,
-                color: Colors.grey[600],
-              ),
+              style: AppStyles.bodyGrey1,
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 10),
             Text(
               'Открыть детали заказа',
-              style: TextStyle(
-                fontSize: 17,
-                color: Colors.lightGreenAccent[700],
-                fontWeight: FontWeight.bold,
-              ),
+              style: AppStyles.bodyGreen1,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 25),
             CustomButton(
               buttonLabel: 'Продолжить покупки',
               onTap: () {},
               padding: const EdgeInsets.symmetric(
                 horizontal: 30,
-                vertical: 20,
+                vertical: 15,
               ),
             )
           ],

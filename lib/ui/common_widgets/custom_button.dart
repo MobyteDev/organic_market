@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:organic_market/common/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
   final String buttonLabel;
@@ -26,14 +27,15 @@ class CustomButton extends StatelessWidget {
           onTap: onTap,
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.lightGreenAccent[700],
+              color: AppColors.green149202_1,
               borderRadius: const BorderRadius.all(Radius.circular(30)),
             ),
             padding: padding,
             child: Text(
               buttonLabel,
               style: const TextStyle(
-                fontSize: 19,
+                fontFamily: "Jost",
+                fontSize: 20,
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
