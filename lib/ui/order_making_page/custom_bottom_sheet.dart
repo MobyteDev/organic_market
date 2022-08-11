@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:organic_market/ui/common_widgets/custom_button.dart';
-import 'package:organic_market/ui/order_success_screen.dart/order_success_screen.dart';
+import 'package:organic_market/ui/order_success_page.dart/order_success_page.dart';
 
 class CustomBottomBar extends StatelessWidget {
   final String buttonLabel;
@@ -38,7 +38,7 @@ class CustomBottomBar extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => const OrderSuccessScreen(),
+                  builder: (context) => const OrderSuccessPage(),
                 ),
               );
             },

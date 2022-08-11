@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:organic_market/common/models/address_settings.dart';
-import 'package:organic_market/ui/order_making_screen/addresses_list_tile.dart';
+import 'package:organic_market/ui/order_making_page/addresses_list_tile.dart';
 
 class AddressesList extends StatefulWidget {
   final List<AddressSettings> addressSetingsList;
@@ -25,13 +25,19 @@ class _AddressesListState extends State<AddressesList> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(
-        top: 40,
+        top: 15,
         left: 20,
         right: 20,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+        color: Colors.white,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Center(child: _buildHandle()),
+          const SizedBox(height: 30),
           const Text(
             'Ваши адреса',
             style: TextStyle(
@@ -39,7 +45,7 @@ class _AddressesListState extends State<AddressesList> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 20),
           ..._buildList(),
           const SizedBox(height: 5),
           Row(
@@ -60,6 +66,19 @@ class _AddressesListState extends State<AddressesList> {
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildHandle() {
+    return FractionallySizedBox(
+      widthFactor: 0.11,
+      child: Container(
+        height: 5,
+        decoration: BoxDecoration(
+          color: Colors.grey[300],
+          borderRadius: const BorderRadius.all(Radius.circular(2.5)),
+        ),
       ),
     );
   }

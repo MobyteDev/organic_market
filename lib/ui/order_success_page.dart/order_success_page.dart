@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:organic_market/ui/common_widgets/custom_button.dart';
 
-class OrderSuccessScreen extends StatelessWidget {
+class OrderSuccessPage extends StatelessWidget {
   final int _orderNumber = 934679;
   final _goodsNumber = 3;
   final int _price = 1850;
 
-  const OrderSuccessScreen({Key? key}) : super(key: key);
+  const OrderSuccessPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

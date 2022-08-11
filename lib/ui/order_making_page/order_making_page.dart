@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:organic_market/common/models/address_settings.dart';
-import 'package:organic_market/ui/order_making_screen/addresses_list.dart';
-import 'package:organic_market/ui/order_making_screen/custom_bottom_bar.dart';
-import 'package:organic_market/ui/order_making_screen/custom_text_field.dart';
-import 'package:organic_market/ui/order_making_screen/order_making_list_tile.dart';
-import 'package:organic_market/ui/order_making_screen/text_row.dart';
-import 'package:organic_market/ui/order_success_screen.dart/order_success_screen.dart';
+import 'package:organic_market/ui/order_making_page/addresses_list.dart';
+import 'package:organic_market/ui/order_making_page/custom_bottom_sheet.dart';
+import 'package:organic_market/ui/order_making_page/custom_switch.dart';
+import 'package:organic_market/ui/order_making_page/custom_text_field.dart';
+import 'package:organic_market/ui/order_making_page/order_making_list_tile.dart';
+import 'package:organic_market/ui/order_making_page/text_row.dart';
+import 'package:organic_market/ui/order_success_page.dart/order_success_page.dart';
 
-class OrderMakingScreen extends StatefulWidget {
-  const OrderMakingScreen({Key? key}) : super(key: key);
+class OrderMakingPage extends StatefulWidget {
+  const OrderMakingPage({Key? key}) : super(key: key);
 
   @override
-  State<OrderMakingScreen> createState() => _OrderMakingScreenState();
+  State<OrderMakingPage> createState() => _OrderMakingPageState();
 }
 
-class _OrderMakingScreenState extends State<OrderMakingScreen> {
+class _OrderMakingPageState extends State<OrderMakingPage> {
   final String _address = 'ул. Маршала Бирюзова, д. 19, кв. 189';
   final String _date = '12 октября';
   final String _time = '15:30';
@@ -45,6 +46,7 @@ class _OrderMakingScreenState extends State<OrderMakingScreen> {
   void _onTapAddresses() {
     showModalBottomSheet(
       context: context,
+      backgroundColor: Colors.transparent,
       builder: (context) {
         return AddressesList(addressSetingsList: _addressSettingsList);
       },
@@ -54,7 +56,7 @@ class _OrderMakingScreenState extends State<OrderMakingScreen> {
   void _onTapMakeOrder() {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => const OrderSuccessScreen(),
+        builder: (context) => const OrderSuccessPage(),
       ),
     );
   }
@@ -119,13 +121,14 @@ class _OrderMakingScreenState extends State<OrderMakingScreen> {
                   ],
                 ),
               ),
-              Switch(
-                inactiveTrackColor: Colors.grey[200],
+              CustomSwitch(
                 value: _switchValue,
                 onChanged: (value) {
-                  setState(() {
-                    _switchValue = value;
-                  });
+                  setState(
+                    () {
+                      _switchValue = value;
+                    },
+                  );
                 },
               ),
             ],
