@@ -6,6 +6,7 @@ import 'package:organic_market/data/offer.dart';
 import 'package:organic_market/data/product.dart';
 import 'package:organic_market/data/product_category.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
+import 'package:organic_market/ui/common_widgets/organic_navigation_bar.dart';
 import 'package:organic_market/ui/common_widgets/product_card_list.dart';
 import 'package:organic_market/ui/main_screen/big_card_list.dart';
 import 'package:organic_market/ui/main_screen/brands.dart';
@@ -30,6 +31,7 @@ class MainScreen extends StatelessWidget {
           height: 30.h,
         ),
       ),
+      bottomNavigationBar: OrganicNavigationBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [

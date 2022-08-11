@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 
-class CustomButton extends StatelessWidget {
+class OrganicButton extends StatelessWidget {
   final String buttonLabel;
   final void Function() onTap;
   final EdgeInsets padding;
 
-  const CustomButton({
+  const OrganicButton({
     Key? key,
     required this.buttonLabel,
     required this.onTap,

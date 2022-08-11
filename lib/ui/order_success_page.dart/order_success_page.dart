@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
-import 'package:organic_market/ui/common_widgets/custom_button.dart';
+import 'package:organic_market/ui/common_widgets/organic_button.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 
 class OrderSuccessPage extends StatelessWidget {
@@ -39,7 +39,7 @@ class OrderSuccessPage extends StatelessWidget {
               style: AppStyles.bodyGreen1,
             ),
             const SizedBox(height: 25),
-            CustomButton(
+            OrganicButton(
               buttonLabel: 'Продолжить покупки',
               onTap: () {},
               padding: const EdgeInsets.symmetric(
