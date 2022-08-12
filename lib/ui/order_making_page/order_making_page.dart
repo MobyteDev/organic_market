@@ -109,11 +109,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
                       style: AppStyles.body3,
                     ),
                     const SizedBox(width: 5),
-                    Icon(
-                      Icons.help,
-                      color: AppColors.grey223215215_1,
-                      size: 23,
-                    ),
+                    Image.asset('assets/icons/help.png')
                   ],
                 ),
               ),
@@ -143,9 +139,9 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
           const SizedBox(height: 5),
           PriceRow(
             title: 'Скидка $_sale%',
-            titleColor: AppColors.red,
+            titleColor: AppColors.pink5589_1,
             value: '-$_salePrice ₽',
-            valueColor: AppColors.red,
+            valueColor: AppColors.pink5589_1,
           ),
           const SizedBox(height: 5),
           PriceRow(
@@ -156,10 +152,10 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
           const SizedBox(height: 15),
           PriceRow(
             title: 'Итого',
-            titleSize: 25,
-            titleWeight: FontWeight.bold,
+            titleSize: 24,
+            titleWeight: FontWeight.w600,
             value: '$_finalPrice ₽',
-            valueSize: 26,
+            valueSize: 24,
             valueWeight: FontWeight.bold,
           ),
         ],

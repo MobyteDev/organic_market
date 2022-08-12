@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:icon_forest/iconoir.dart';
 import 'package:organic_market/data/offer.dart';
 import 'package:organic_market/data/product.dart';
 import 'package:organic_market/data/product_category.dart';
@@ -25,11 +24,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       appBar: OrganicAppBar(
         title: 'ул. Пушкина 15, д. 20, кв. 113',
-        prefixIcon: Iconoir(
-          Iconoir.delivery_truck,
-          color: AppColors.green149202_1,
-          height: 30.h,
-        ),
+        prefixIcon: Image.asset('assets/icons/green_car.png'),
       ),
       bottomNavigationBar: OrganicNavigationBar(),
       body: SingleChildScrollView(

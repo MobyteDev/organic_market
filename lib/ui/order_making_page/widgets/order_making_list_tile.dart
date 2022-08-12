@@ -30,7 +30,7 @@ class OrderMakingListTile extends StatelessWidget {
                 const SizedBox(height: 3),
                 Text(
                   subtitle,
-                  style: AppStyles.header1,
+                  style: AppStyles.header6,
                 ),
               ],
             ),

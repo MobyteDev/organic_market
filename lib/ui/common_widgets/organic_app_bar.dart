@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:icon_forest/iconoir.dart';
 import 'package:organic_market/common/app_colors.dart';
-import 'package:organic_market/common/app_styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OrganicAppBar extends StatelessWidget with PreferredSizeWidget {
@@ -48,11 +46,7 @@ class OrganicAppBar extends StatelessWidget with PreferredSizeWidget {
             ],
           ),
           leading: isBack
-              ? Icon(
-                  Icons.arrow_back_ios,
-                  color: AppColors.grey209204204_1,
-                  size: 20,
-                )
+              ? Image.asset('assets/icons/back.png')
               : actions != null
                   ? SizedBox(width: 56)
                   : null,

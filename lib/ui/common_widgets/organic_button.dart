@@ -35,7 +35,7 @@ class OrganicButton extends StatelessWidget {
               buttonLabel,
               style: const TextStyle(
                 fontFamily: "Jost",
-                fontSize: 20,
+                fontSize: 18,
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
