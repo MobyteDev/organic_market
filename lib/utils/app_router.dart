@@ -15,7 +15,8 @@ import '../ui/main_screen/main_screen.dart';
       children: [
         MaterialRoute(
           page: MainPage,
-          path: 'mainPage'
+          path: 'mainPage',
+          initial: true,
         ),
         MaterialRoute(
           page: CategoriesPage,

@@ -14,13 +14,8 @@ class OrganicNavigationBar extends StatefulWidget {
 class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
   final int _counter = 3;
 
-  int _selectedIndex = 0;
-
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-    AutoTabsRouter.of(context).setActiveIndex;
+    AutoTabsRouter.of(context).setActiveIndex(index);
   }
 
   @override
@@ -34,7 +29,6 @@ class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
       type: BottomNavigationBarType.fixed,
       // currentIndex: _selectedIndex,
       currentIndex: AutoTabsRouter.of(context).activeIndex,
-      // onTap: ,
       onTap: _onItemTapped,
       items: [
         _buildBottomNavigationBarItem(

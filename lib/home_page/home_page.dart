@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
         builder: (context, child, tabController) {
           return Scaffold(
             bottomNavigationBar: OrganicNavigationBar(),
-            
+            body: child,
           );
         },
       ),

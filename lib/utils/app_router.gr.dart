@@ -58,6 +58,11 @@ class AutoRouter extends _i7.RootStackRouter {
   @override
   List<_i7.RouteConfig> get routes => [
         _i7.RouteConfig(HomePageRoute.name, path: '/', children: [
+          _i7.RouteConfig('#redirect',
+              path: '',
+              parent: HomePageRoute.name,
+              redirectTo: 'mainPage',
+              fullMatch: true),
           _i7.RouteConfig(MainPageRoute.name,
               path: 'mainPage', parent: HomePageRoute.name),
           _i7.RouteConfig(CategoriesPageRoute.name,
