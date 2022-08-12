@@ -15,8 +15,6 @@ import 'package:organic_market/ui/main_screen/footer.dart';
 import 'package:organic_market/ui/product_page/product_page.dart';
 import 'package:organic_market/utils/app_router.gr.dart';
 
-import '../../common/app_colors.dart';
-
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
 
@@ -104,6 +102,7 @@ class MainPage extends StatelessWidget {
               Footer(),
             ],
           ),
+
         ),
     );
   }
