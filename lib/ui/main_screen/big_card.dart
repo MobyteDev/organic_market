@@ -14,65 +14,71 @@ class BigCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    return Container(
-      width: 0.9.sw,
-      height: 0.3.sh,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Stack(
-        children: [
-          Align(
-            alignment: Alignment.bottomRight,
-            child: ClipPath(
-              clipper: _CustomClipper(),
-              child: SizedBox(
-                width: 0.45.sw,
-                height: 0.225.sh,
-                child: Image.asset(
-                  offer.image,
-                  fit: BoxFit.contain,
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(10),
+      child: Container(
+        width: 0.9.sw,
+        height: 0.3.sh,
+        decoration: BoxDecoration(
+          color: color,
+        ),
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.bottomRight,
+              child: ClipPath(
+                clipper: _CustomClipper(),
+                child: SizedBox(
+                  width: 0.45.sw,
+                  height: 0.225.sh,
+                  child: Image.asset(
+                    offer.image,
+                    fit: BoxFit.fitWidth,
+                  ),
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-              width: 233.w,
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(offer.title, style: AppStyles.bigHeader),
-                  SizedBox(
-                    height: 0.01.sh,
-                  ),
-                  Spacer(),
-                  SizedBox(width: 0.5.sw, child: Text(offer.description, style: AppStyles.body1.copyWith(height: 1),)),
-                  SizedBox(
-                    height: 0.01.sh,
-                  ),
-                  Spacer(),
-                  OutlinedButton(
-                    onPressed: () {},
-                    style: OutlinedButton.styleFrom(
-                      textStyle: AppStyles.header3,
-                      backgroundColor: AppColors.green149202_1,
-                      foregroundColor: AppColors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                width: 233.w,
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(offer.title, style: AppStyles.bigHeader),
+                    SizedBox(
+                      height: 0.01.sh,
                     ),
-                    child: const Text("Узнать больше"),
-                  ),
-                ],
+                    Spacer(),
+                    SizedBox(
+                        width: 0.5.sw,
+                        child: Text(
+                          offer.description,
+                          style: AppStyles.body1.copyWith(height: 1),
+                        )),
+                    SizedBox(
+                      height: 0.01.sh,
+                    ),
+                    Spacer(),
+                    OutlinedButton(
+                      onPressed: () {},
+                      style: OutlinedButton.styleFrom(
+                        textStyle: AppStyles.header3,
+                        backgroundColor: AppColors.green149202_1,
+                        foregroundColor: AppColors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                      ),
+                      child: const Text("Узнать больше"),
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
