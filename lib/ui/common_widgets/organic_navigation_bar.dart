@@ -23,63 +23,60 @@ class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 70,
-      child: BottomNavigationBar(
-        backgroundColor: AppColors.white,
-        selectedItemColor: AppColors.green149202_1,
-        unselectedItemColor: Color.fromARGB(255, 211, 206, 206),
-        selectedLabelStyle: AppStyles.header5,
-        unselectedLabelStyle: AppStyles.header5,
-        type: BottomNavigationBarType.fixed,
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        items: [
-          _buildBottomNavigationBarItem(
-            icon: _selectedIndex == 0
-                ? Image.asset('assets/icons/main_green.png')
-                : Image.asset('assets/icons/main.png'),
-            label: 'Главная',
+    return BottomNavigationBar(
+      backgroundColor: AppColors.white,
+      selectedItemColor: AppColors.green149202_1,
+      unselectedItemColor: Color.fromARGB(255, 211, 206, 206),
+      selectedLabelStyle: AppStyles.header5,
+      unselectedLabelStyle: AppStyles.header5,
+      type: BottomNavigationBarType.fixed,
+      currentIndex: _selectedIndex,
+      onTap: _onItemTapped,
+      items: [
+        _buildBottomNavigationBarItem(
+          icon: _selectedIndex == 0
+              ? Image.asset('assets/icons/main_green.png')
+              : Image.asset('assets/icons/main.png'),
+          label: 'Главная',
+        ),
+        _buildBottomNavigationBarItem(
+          icon: _selectedIndex == 1
+              ? Image.asset('assets/icons/catalog_green.png')
+              : Image.asset('assets/icons/catalog.png'),
+          label: 'Каталог',
+        ),
+        _buildBottomNavigationBarItem(
+          icon: Image.asset(
+            'assets/icons/search.png',
+            color: _selectedIndex == 2 ? AppColors.green149202_1 : null,
           ),
-          _buildBottomNavigationBarItem(
-            icon: _selectedIndex == 1
-                ? Image.asset('assets/icons/catalog_green.png')
-                : Image.asset('assets/icons/catalog.png'),
-            label: 'Каталог',
+          label: 'Поиск',
+        ),
+        BottomNavigationBarItem(
+          icon: Stack(
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 10.h),
+                alignment: Alignment.center,
+                child: _selectedIndex == 3
+                    ? Image.asset('assets/icons/cart_green.png')
+                    : Image.asset('assets/icons/cart.png'),
+              ),
+              Positioned(
+                child: _buildCounter(),
+                left: 35.w,
+              )
+            ],
           ),
-          _buildBottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/search.png',
-              color: _selectedIndex == 2 ? AppColors.green149202_1 : null,
-            ),
-            label: 'Поиск',
-          ),
-          BottomNavigationBarItem(
-            icon: Stack(
-              children: [
-                Container(
-                  padding: EdgeInsets.only(top: 10.h),
-                  alignment: Alignment.center,
-                  child: _selectedIndex == 3
-                      ? Image.asset('assets/icons/cart_green.png')
-                      : Image.asset('assets/icons/cart.png'),
-                ),
-                Positioned(
-                  child: _buildCounter(),
-                  left: 35.w,
-                )
-              ],
-            ),
-            label: 'Корзина',
-          ),
-          _buildBottomNavigationBarItem(
-            icon: _selectedIndex == 4
-                ? Image.asset('assets/icons/profile_green.png')
-                : Image.asset('assets/icons/profile.png'),
-            label: 'Профиль',
-          ),
-        ],
-      ),
+          label: 'Корзина',
+        ),
+        _buildBottomNavigationBarItem(
+          icon: _selectedIndex == 4
+              ? Image.asset('assets/icons/profile_green.png')
+              : Image.asset('assets/icons/profile.png'),
+          label: 'Профиль',
+        ),
+      ],
     );
   }
 
