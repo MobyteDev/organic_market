@@ -8,7 +8,7 @@ class Brands extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Align(
+        Align(
           alignment: Alignment.centerLeft,
           child: Padding(
             padding: const EdgeInsets.all(12.0),

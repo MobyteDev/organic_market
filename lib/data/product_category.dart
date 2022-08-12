@@ -1,6 +1,6 @@
 class ProductCategory {
-  const ProductCategory(this.name, this.image);
+  const ProductCategory(this.title, this.image);
 
-  final String name;
+  final String title;
   final String image;
 }
