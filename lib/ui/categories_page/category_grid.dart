@@ -26,9 +26,16 @@ class CategoryGrid extends StatelessWidget {
           SizedBox(height: 0.02.sh),
           GridView.builder(
             physics: NeverScrollableScrollPhysics(),
-            itemBuilder: (context, i) => CategoryCard(category: categories[i], onTap: (){}, width: 163.w),
-            gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: 163.w/117.h, crossAxisSpacing: 16.h, mainAxisSpacing: 16.w),
+            itemBuilder: (context, i) => CategoryCard(
+                category: categories[i],
+                onTap: () {},
+                width: 163.w,
+                small: false),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 163.w / 117.h,
+                crossAxisSpacing: 16.h,
+                mainAxisSpacing: 16.w),
             itemCount: categories.length,
             shrinkWrap: true,
           ),

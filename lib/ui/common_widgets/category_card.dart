@@ -9,16 +9,18 @@ class CategoryCard extends StatelessWidget {
     required this.category,
     required this.onTap,
     required this.width,
+    this.small = true,
   });
 
   final ProductCategory category;
   final double width;
   final VoidCallback onTap;
+  final bool small;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(2.0),
+      padding: small ? const EdgeInsets.all(3.0) : const EdgeInsets.all(6.0),
       width: width,
       decoration: BoxDecoration(
         color: AppColors.white,
@@ -37,21 +39,15 @@ class CategoryCard extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.topLeft,
-            child: Padding(
-              padding: const EdgeInsets.all(3.0),
-              child: SizedBox(height: 80.h, child: Image.asset(category.image)),
-            ),
+            child: SizedBox(height: 80.h, child: Image.asset(category.image)),
           ),
           Align(
             alignment: Alignment.bottomLeft,
-            child: Padding(
-              padding: const EdgeInsets.all(3.0),
-              child: SizedBox(
-                width: 90.w,
-                child: Text(
-                  category.name,
-                  style: AppStyles.body2,
-                ),
+            child: SizedBox(
+              width: 100.w,
+              child: Text(
+                category.title,
+                style: small ? AppStyles.body2.copyWith(height: 1) : AppStyles.body1.copyWith(height: 1),
               ),
             ),
           ),

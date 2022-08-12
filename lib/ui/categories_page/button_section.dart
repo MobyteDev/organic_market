@@ -25,9 +25,19 @@ class ButtonSection extends StatelessWidget {
                 onPressed: discounts,
                 style: ElevatedButton.styleFrom(
                     foregroundColor: AppColors.black, backgroundColor: AppColors.white),
-                child: Text(
-                  "Скидки",
-                  style: AppStyles.bigBody,
+                child: Center(
+                  child: Row(
+                    children: [
+                      Spacer(),
+                      Image.asset("assets/icons/percent.png"),
+                      SizedBox(width: 5.w),
+                      Text(
+                        "Скидки",
+                        style: AppStyles.bigBody,
+                      ),
+                      Spacer(),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -38,9 +48,19 @@ class ButtonSection extends StatelessWidget {
                 onPressed: favorite,
                 style: ElevatedButton.styleFrom(
                     foregroundColor: AppColors.black, backgroundColor: AppColors.white),
-                child: Text(
-                  "Избранное",
-                  style: AppStyles.bigBody,
+                child: Center(
+                  child: Row(
+                    children: [
+                      Spacer(),
+                      Image.asset("assets/icons/heart.png"),
+                      SizedBox(width: 5.w),
+                      Text(
+                        "Избранное",
+                        style: AppStyles.bigBody,
+                      ),
+                      Spacer(),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -56,9 +76,19 @@ class ButtonSection extends StatelessWidget {
             onPressed: alreadyBought,
             style: ElevatedButton.styleFrom(
                 foregroundColor: AppColors.black, backgroundColor: AppColors.white),
-            child: Text(
-              "Уже покупали",
-              style: AppStyles.bigBody,
+            child: Center(
+              child: Row(
+                children: [
+                  Spacer(),
+                  Image.asset("assets/icons/shopping_cart.png"),
+                  SizedBox(width: 5.w),
+                  Text(
+                    "Уже покупали",
+                    style: AppStyles.bigBody,
+                  ),
+                  Spacer(),
+                ],
+              ),
             ),
           ),
         ),
