@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/data/offer.dart';
 import 'package:organic_market/data/product.dart';
 import 'package:organic_market/data/product_category.dart';
+import 'package:organic_market/ui/common_widgets/address_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/organic_navigation_bar.dart';
 import 'package:organic_market/ui/common_widgets/product_card_list.dart';
