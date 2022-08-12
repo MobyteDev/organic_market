@@ -8,7 +8,7 @@ import '../ui/main_screen/main_screen.dart';
 @MaterialAutoRouter(
   routes: [
     MaterialRoute(
-      page: MainScreen,
+      page: MainPage,
       initial: true,
       // children: [
       //   MaterialRoute(
@@ -16,6 +16,7 @@ import '../ui/main_screen/main_screen.dart';
       //     path: 'product',
       //   ),
       // ],
+      
     ),
     MaterialRoute(page: ProductPage, path: '/product'),
     MaterialRoute(page: OrderMakingPage, path: '/orderMaking'),

@@ -25,9 +25,9 @@ class AutoRouter extends _i5.RootStackRouter {
 
   @override
   final Map<String, _i5.PageFactory> pagesMap = {
-    MainScreenRoute.name: (routeData) {
+    MainPageRoute.name: (routeData) {
       return _i5.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.MainScreen());
+          routeData: routeData, child: const _i1.MainPage());
     },
     ProductPageRoute.name: (routeData) {
       final args = routeData.argsAs<ProductPageRouteArgs>();
@@ -47,7 +47,7 @@ class AutoRouter extends _i5.RootStackRouter {
 
   @override
   List<_i5.RouteConfig> get routes => [
-        _i5.RouteConfig(MainScreenRoute.name, path: '/'),
+        _i5.RouteConfig(MainPageRoute.name, path: '/'),
         _i5.RouteConfig(ProductPageRoute.name, path: '/product'),
         _i5.RouteConfig(OrderMakingPageRoute.name, path: '/orderMaking'),
         _i5.RouteConfig(OrderSuccessPageRoute.name, path: '/orderSuccess')
@@ -55,11 +55,11 @@ class AutoRouter extends _i5.RootStackRouter {
 }
 
 /// generated route for
-/// [_i1.MainScreen]
-class MainScreenRoute extends _i5.PageRouteInfo<void> {
-  const MainScreenRoute() : super(MainScreenRoute.name, path: '/');
+/// [_i1.MainPage]
+class MainPageRoute extends _i5.PageRouteInfo<void> {
+  const MainPageRoute() : super(MainPageRoute.name, path: '/');
 
-  static const String name = 'MainScreenRoute';
+  static const String name = 'MainPageRoute';
 }
 
 /// generated route for

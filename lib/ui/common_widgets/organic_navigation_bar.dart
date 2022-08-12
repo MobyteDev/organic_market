@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:organic_market/ui/common_widgets/counter.dart';
 
 class OrganicNavigationBar extends StatefulWidget {
   const OrganicNavigationBar({Key? key}) : super(key: key);
@@ -67,7 +68,7 @@ class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
                 ),
               ),
               Positioned(
-                child: _buildCounter(),
+                child: Counter(counter: _counter),
                 left: 35.w,
               )
             ],
@@ -82,33 +83,6 @@ class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
           label: 'Профиль',
         ),
       ],
-    );
-  }
-
-  Widget _buildCounter() {
-    return Container(
-      padding: EdgeInsets.all(3),
-      decoration: BoxDecoration(
-        color: AppColors.white,
-        borderRadius: BorderRadius.all(Radius.circular(20.r)),
-      ),
-      child: Container(
-        height: 16.h,
-        width: 16.w,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: AppColors.pink5589_1,
-          borderRadius: BorderRadius.all(Radius.circular(20.r)),
-        ),
-        child: Text(
-          '$_counter',
-          style: TextStyle(
-            color: AppColors.white,
-            fontSize: 11,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
     );
   }
 
