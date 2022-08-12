@@ -12,7 +12,7 @@ import 'package:organic_market/ui/product_page/widgets/features.dart';
 import 'package:organic_market/ui/product_page/widgets/product_app_bar.dart';
 import 'package:organic_market/ui/product_page/widgets/product_delivery.dart';
 import 'package:organic_market/ui/product_page/widgets/specifications.dart';
-import 'package:organic_market/ui/product_page/widgets/switcher.dart';
+import 'package:organic_market/ui/common_widgets/switcher.dart';
 
 import '../../data/product.dart';
 

@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:organic_market/home_page/home_page.dart';
+import 'package:organic_market/ui/home_page/home_page.dart';
 import 'package:organic_market/ui/categories_page/categories_page.dart';
 import 'package:organic_market/ui/order_making_page/order_making_page.dart';
 import 'package:organic_market/ui/order_success_page.dart/order_success_page.dart';

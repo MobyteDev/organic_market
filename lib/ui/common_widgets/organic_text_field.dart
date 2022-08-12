@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 
-class CustomTextField extends StatelessWidget {
+class OrganicTextField extends StatelessWidget {
   final String labelText;
   final TextEditingController controller;
 
-  const CustomTextField({
+  const OrganicTextField({
     Key? key,
     required this.labelText,
     required this.controller,

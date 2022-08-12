@@ -14,7 +14,7 @@
 import 'package:auto_route/auto_route.dart' as _i7;
 import 'package:flutter/material.dart' as _i8;
 
-import '../home_page/home_page.dart' as _i1;
+import '../ui/home_page/home_page.dart' as _i1;
 import '../ui/categories_page/categories_page.dart' as _i6;
 import '../ui/main_screen/main_screen.dart' as _i5;
 import '../ui/order_making_page/order_making_page.dart' as _i3;
