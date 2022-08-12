@@ -13,6 +13,26 @@ class AppStyles {
       TextStyle(fontFamily: 'Jost', fontSize: 16, fontWeight: FontWeight.w400);
   static final TextStyle bigBody = TextStyle(
       fontFamily: 'Jost', fontSize: 16.sp, fontWeight: FontWeight.w400);
+  static const TextStyle body4 = TextStyle(
+    fontFamily: 'Jost',
+    fontSize: 13,
+    fontWeight: FontWeight.w700,
+    color: AppColors.white,
+  );
+  static const TextStyle body5 = TextStyle(
+    fontFamily: 'Jost',
+    fontSize: 13,
+    fontWeight: FontWeight.w600,
+    color: AppColors.white,
+    letterSpacing: 1.4,
+  );
+  static const TextStyle body6 = TextStyle(
+    fontFamily: 'Jost',
+    fontSize: 13,
+    fontWeight: FontWeight.w600,
+    color: AppColors.black,
+    letterSpacing: 1.4,
+  );
   static const TextStyle bodyGrey1 = TextStyle(
       fontFamily: 'Jost',
       fontSize: 14,
