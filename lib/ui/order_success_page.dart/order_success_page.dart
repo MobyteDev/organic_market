@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
-import 'package:organic_market/ui/common_widgets/custom_button.dart';
+import 'package:organic_market/ui/common_widgets/organic_button.dart';
+import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 
 class OrderSuccessPage extends StatelessWidget {
   final int _orderNumber = 934679;
@@ -13,17 +14,7 @@ class OrderSuccessPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Корзина',
-          style: TextStyle(
-            fontFamily: 'Jost',
-            color: AppColors.black,
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+      appBar: OrganicAppBar(title: 'Корзина'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -48,7 +39,7 @@ class OrderSuccessPage extends StatelessWidget {
               style: AppStyles.bodyGreen1,
             ),
             const SizedBox(height: 25),
-            CustomButton(
+            OrganicButton(
               buttonLabel: 'Продолжить покупки',
               onTap: () {},
               padding: const EdgeInsets.symmetric(

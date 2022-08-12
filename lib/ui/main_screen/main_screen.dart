@@ -4,7 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/data/offer.dart';
 import 'package:organic_market/data/product.dart';
 import 'package:organic_market/data/product_category.dart';
+import 'package:organic_market/ui/common_widgets/address_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
+import 'package:organic_market/ui/common_widgets/organic_navigation_bar.dart';
 import 'package:organic_market/ui/common_widgets/product_card_list.dart';
 import 'package:organic_market/ui/main_screen/big_card_list.dart';
 import 'package:organic_market/ui/main_screen/brands.dart';
@@ -15,14 +17,25 @@ import 'package:organic_market/utils/app_router.gr.dart';
 
 import '../../common/app_colors.dart';
 
-class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key}) : super(key: key);
+class MainPage extends StatelessWidget {
+  const MainPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    
-        return Scaffold(
-          appBar: OrganicAppBar(),
+    return WillPopScope(
+      onWillPop: () async {
+        return false;
+      },
+      child: AutoTabsRouter.tabBar(
+        routes: [
+          
+        ],
+        builder: (context, child, tabController) => Scaffold(
+          appBar: OrganicAppBar(
+            title: 'ул. Пушкина 15, д. 20, кв. 113',
+            prefixIcon: Image.asset('assets/icons/green_car.png'),
+          ),
+          bottomNavigationBar: OrganicNavigationBar(),
           body: SingleChildScrollView(
             child: Column(
               children: [
@@ -100,6 +113,8 @@ class MainScreen extends StatelessWidget {
               ],
             ),
           ),
-        );
+        ),
+      ),
+    );
   }
 }

@@ -41,7 +41,7 @@ class BigCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
-              width: 0.6.sw,
+              width: 233.w,
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,10 +50,12 @@ class BigCard extends StatelessWidget {
                   SizedBox(
                     height: 0.01.sh,
                   ),
-                  Text(offer.description, style: AppStyles.body1),
+                  Spacer(),
+                  SizedBox(width: 0.5.sw, child: Text(offer.description, style: AppStyles.body1.copyWith(height: 1),)),
                   SizedBox(
-                    height: 0.06.sh,
+                    height: 0.01.sh,
                   ),
+                  Spacer(),
                   OutlinedButton(
                     onPressed: () {},
                     style: OutlinedButton.styleFrom(

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 
-class CustomButton extends StatelessWidget {
+class OrganicButton extends StatelessWidget {
   final String buttonLabel;
   final void Function() onTap;
   final EdgeInsets padding;
 
-  const CustomButton({
+  const OrganicButton({
     Key? key,
     required this.buttonLabel,
     required this.onTap,
@@ -35,7 +35,7 @@ class CustomButton extends StatelessWidget {
               buttonLabel,
               style: const TextStyle(
                 fontFamily: "Jost",
-                fontSize: 20,
+                fontSize: 18,
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),

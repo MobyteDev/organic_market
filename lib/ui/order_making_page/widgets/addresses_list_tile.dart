@@ -23,7 +23,7 @@ class AddressesListTile extends StatelessWidget {
                   Text(
                     addressSettings.addressType,
                     style: const TextStyle(
-                      fontSize: 17,
+                      fontSize: 14,
                       color: Colors.grey,
                     ),
                   ),
@@ -31,7 +31,7 @@ class AddressesListTile extends StatelessWidget {
                   Text(
                     addressSettings.address,
                     style: const TextStyle(
-                      fontSize: 17,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -39,10 +39,7 @@ class AddressesListTile extends StatelessWidget {
               ),
             ),
             addressSettings.isSelected
-                ? Icon(
-                    Icons.check,
-                    color: AppColors.green149202_1,
-                  )
+                ? Image.asset('assets/icons/check.png')
                 : Container(),
           ],
         ),

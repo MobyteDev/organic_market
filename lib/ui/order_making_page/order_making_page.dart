@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/data/address_settings.dart';
+import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/order_making_page/widgets/addresses_list.dart';
 import 'package:organic_market/ui/order_making_page/widgets/custom_bottom_bar.dart';
 import 'package:organic_market/ui/order_making_page/widgets/custom_switch.dart';
@@ -67,17 +68,9 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        shadowColor: Colors.grey[200],
-        title: const Text(
-          'Оформление заказа',
-          style: TextStyle(
-            fontFamily: 'Jost',
-            color: AppColors.black,
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+      appBar: OrganicAppBar(
+        title: 'Оформление заказа',
+        isBack: true,
       ),
       bottomNavigationBar: CustomBottomBar(
         buttonLabel: 'Оформить заказ',
@@ -116,11 +109,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
                       style: AppStyles.body3,
                     ),
                     const SizedBox(width: 5),
-                    Icon(
-                      Icons.help,
-                      color: AppColors.grey223215215_1,
-                      size: 23,
-                    ),
+                    Image.asset('assets/icons/help.png')
                   ],
                 ),
               ),
@@ -150,9 +139,9 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
           const SizedBox(height: 5),
           PriceRow(
             title: 'Скидка $_sale%',
-            titleColor: AppColors.red,
+            titleColor: AppColors.pink5589_1,
             value: '-$_salePrice ₽',
-            valueColor: AppColors.red,
+            valueColor: AppColors.pink5589_1,
           ),
           const SizedBox(height: 5),
           PriceRow(
@@ -163,10 +152,10 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
           const SizedBox(height: 15),
           PriceRow(
             title: 'Итого',
-            titleSize: 25,
-            titleWeight: FontWeight.bold,
+            titleSize: 24,
+            titleWeight: FontWeight.w600,
             value: '$_finalPrice ₽',
-            valueSize: 26,
+            valueSize: 24,
             valueWeight: FontWeight.bold,
           ),
         ],
