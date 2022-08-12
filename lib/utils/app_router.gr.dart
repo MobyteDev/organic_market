@@ -25,17 +25,10 @@ class AutoRouter extends _i6.RootStackRouter {
       : super(navigatorKey);
 
   @override
-<<<<<<< HEAD
-  final Map<String, _i5.PageFactory> pagesMap = {
-    MainPageRoute.name: (routeData) {
-      return _i5.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.MainPage());
-=======
   final Map<String, _i6.PageFactory> pagesMap = {
-    MainScreenRoute.name: (routeData) {
+    MainPageRoute.name: (routeData) {
       return _i6.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i1.MainScreen());
->>>>>>> 824d790ca933fbf5e81bf367d2e1b12578d2dd04
+          routeData: routeData, child: const _i1.MainPage());
     },
     ProductPageRoute.name: (routeData) {
       final args = routeData.argsAs<ProductPageRouteArgs>();
@@ -58,36 +51,22 @@ class AutoRouter extends _i6.RootStackRouter {
   };
 
   @override
-<<<<<<< HEAD
-  List<_i5.RouteConfig> get routes => [
-        _i5.RouteConfig(MainPageRoute.name, path: '/'),
-        _i5.RouteConfig(ProductPageRoute.name, path: '/product'),
-        _i5.RouteConfig(OrderMakingPageRoute.name, path: '/orderMaking'),
-        _i5.RouteConfig(OrderSuccessPageRoute.name, path: '/orderSuccess')
-=======
   List<_i6.RouteConfig> get routes => [
-        _i6.RouteConfig(MainScreenRoute.name, path: '/', children: [
+        _i6.RouteConfig(MainPageRoute.name, path: '/', children: [
           _i6.RouteConfig(CategoriesPageRoute.name,
-              path: 'categories', parent: MainScreenRoute.name)
+              path: 'categories', parent: MainPageRoute.name)
         ]),
         _i6.RouteConfig(ProductPageRoute.name, path: '/product'),
         _i6.RouteConfig(OrderMakingPageRoute.name, path: '/orderMaking'),
         _i6.RouteConfig(OrderSuccessPageRoute.name, path: '/orderSuccess')
->>>>>>> 824d790ca933fbf5e81bf367d2e1b12578d2dd04
       ];
 }
 
 /// generated route for
-<<<<<<< HEAD
 /// [_i1.MainPage]
-class MainPageRoute extends _i5.PageRouteInfo<void> {
-  const MainPageRoute() : super(MainPageRoute.name, path: '/');
-=======
-/// [_i1.MainScreen]
-class MainScreenRoute extends _i6.PageRouteInfo<void> {
-  const MainScreenRoute({List<_i6.PageRouteInfo>? children})
-      : super(MainScreenRoute.name, path: '/', initialChildren: children);
->>>>>>> 824d790ca933fbf5e81bf367d2e1b12578d2dd04
+class MainPageRoute extends _i6.PageRouteInfo<void> {
+  const MainPageRoute({List<_i6.PageRouteInfo>? children})
+      : super(MainPageRoute.name, path: '/', initialChildren: children);
 
   static const String name = 'MainPageRoute';
 }
