@@ -47,12 +47,10 @@ class OrganicAppBar extends StatelessWidget with PreferredSizeWidget {
           ),
           leading: isBack
               ? Image.asset('assets/icons/back.png')
-              : actions != null
-                  ? SizedBox(width: 56)
-                  : null,
+              : SizedBox(width: 56),
           actions: actions ??
               [
-                isBack ? SizedBox(width: 56) : Container(),
+                SizedBox(width: 56),
               ],
         ),
       ],
