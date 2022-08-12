@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -5,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/ui/common_widgets/product_card_list.dart';
 import 'package:organic_market/ui/product_page/widgets/brand.dart';
+import 'package:organic_market/ui/product_page/widgets/carousel.dart';
 import 'package:organic_market/ui/product_page/widgets/features.dart';
 import 'package:organic_market/ui/product_page/widgets/product_app_bar.dart';
 import 'package:organic_market/ui/product_page/widgets/product_delivery.dart';
@@ -28,6 +30,17 @@ class ProductPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Carousel(
+              pics: [
+                "assets/images/meat.png",
+                "assets/images/meat.png",
+                "assets/images/meat.png",
+                "assets/images/meat.png",
+              ],
+            ),
+            SizedBox(
+            height: 24.h, 
+            ),
             Container(
               color: AppColors.white,
               child: Column(
@@ -63,9 +76,9 @@ class ProductPage extends StatelessWidget {
                           values: ["0,4кг", "1,2кг"],
                           discountsValues: ["", "20"],
                         ),
-                        SizedBox(
-                          height: 24.h,
-                        ),
+                        // SizedBox(
+                        //   height: 24.h,
+                        // ),
                         Specifications(),
                       ],
                     ),

@@ -58,13 +58,21 @@ class _SwitcherState extends State<Switcher>
           SlideTransition(
             position: _offsetAnimation,
             child: Container(
-              height: 43.h,
-              width: 165.w,
+              height: 35.h,
+              width: 157.w,
               decoration: BoxDecoration(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(
                   50,
                 ),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 10,
+                    color: AppColors.grey7994115_015,
+                    offset: Offset(5, 10)
+                  ),
+                  
+                ],
               ),
             ),
           ),
