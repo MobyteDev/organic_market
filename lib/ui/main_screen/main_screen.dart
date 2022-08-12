@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/data/offer.dart';
 import 'package:organic_market/data/product.dart';
 import 'package:organic_market/data/product_category.dart';
+import 'package:organic_market/ui/common_widgets/address_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/product_card_list.dart';
 import 'package:organic_market/ui/main_screen/big_card_list.dart';
@@ -22,7 +23,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     
         return Scaffold(
-          appBar: OrganicAppBar(),
+          appBar: AddressAppBar(title: "ул. Пушкина 15, д. 20, кв. 113"),
           body: SingleChildScrollView(
             child: Column(
               children: [

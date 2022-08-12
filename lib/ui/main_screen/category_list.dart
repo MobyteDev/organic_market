@@ -16,7 +16,7 @@ class CategoryList extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
-          const Align(
+          Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Популярные категории",
