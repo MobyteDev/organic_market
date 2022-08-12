@@ -22,7 +22,7 @@ class _SpecificationsState extends State<Specifications> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       children: [
         Row(
           children: [
@@ -84,11 +84,12 @@ class _SpecificationsState extends State<Specifications> {
               ),
             ),
             //TODO: finish when design will be done
-            SizedBox(
-              height: 300,
-            ),
+            
             
           ],
+        ),
+        SizedBox(
+          height: 300,
         ),
       ],
     );
