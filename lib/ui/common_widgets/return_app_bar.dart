@@ -14,7 +14,7 @@ class ReturnAppBar extends StatelessWidget with PreferredSizeWidget {
   final List<Widget> children;
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight)+Offset(0, 47.h);
+  Size get preferredSize => Size.fromHeight(kToolbarHeight)+ (children.length == 0 ? Offset(0,0):Offset(0, 47.h));
 
   @override
   Widget build(BuildContext context) {
