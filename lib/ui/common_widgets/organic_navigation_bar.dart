@@ -23,50 +23,63 @@ class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      backgroundColor: AppColors.white,
-      iconSize: 30.h,
-      selectedItemColor: AppColors.green149202_1,
-      unselectedItemColor: Color.fromARGB(255, 211, 206, 206),
-      selectedLabelStyle: AppStyles.header5,
-      unselectedLabelStyle: AppStyles.header5,
-      type: BottomNavigationBarType.fixed,
-      currentIndex: _selectedIndex,
-      onTap: _onItemTapped,
-      items: [
-        BottomNavigationBarItem(
-          icon: Image.asset('assets/icons/main.png'),
-          label: 'Главная',
-        ),
-        BottomNavigationBarItem(
-          icon: Image.asset('assets/icons/catalog.png'),
-          label: 'Каталог',
-        ),
-        BottomNavigationBarItem(
-          icon: Image.asset('assets/icons/search.png'),
-          label: 'Поиск',
-        ),
-        BottomNavigationBarItem(
-          icon: Stack(
-            children: [
-              Center(
-                child: Image.asset('assets/icons/cart.png'),
-              ),
-              Row(
-                children: [
-                  SizedBox(width: 40.w),
-                  _buildCounter(),
-                ],
-              ),
-            ],
+    return Container(
+      height: 70,
+      child: BottomNavigationBar(
+        backgroundColor: AppColors.white,
+        selectedItemColor: AppColors.green149202_1,
+        unselectedItemColor: Color.fromARGB(255, 211, 206, 206),
+        selectedLabelStyle: AppStyles.header5,
+        unselectedLabelStyle: AppStyles.header5,
+        type: BottomNavigationBarType.fixed,
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        items: [
+          _buildBottomNavigationBarItem(
+            icon: _selectedIndex == 0
+                ? Image.asset('assets/icons/main_green.png')
+                : Image.asset('assets/icons/main.png'),
+            label: 'Главная',
           ),
-          label: 'Корзина',
-        ),
-        BottomNavigationBarItem(
-          icon: Image.asset('assets/icons/profile.png'),
-          label: 'Профиль',
-        ),
-      ],
+          _buildBottomNavigationBarItem(
+            icon: _selectedIndex == 1
+                ? Image.asset('assets/icons/catalog_green.png')
+                : Image.asset('assets/icons/catalog.png'),
+            label: 'Каталог',
+          ),
+          _buildBottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/icons/search.png',
+              color: _selectedIndex == 2 ? AppColors.green149202_1 : null,
+            ),
+            label: 'Поиск',
+          ),
+          BottomNavigationBarItem(
+            icon: Stack(
+              children: [
+                Container(
+                  padding: EdgeInsets.only(top: 10.h),
+                  alignment: Alignment.center,
+                  child: _selectedIndex == 3
+                      ? Image.asset('assets/icons/cart_green.png')
+                      : Image.asset('assets/icons/cart.png'),
+                ),
+                Positioned(
+                  child: _buildCounter(),
+                  left: 35.w,
+                )
+              ],
+            ),
+            label: 'Корзина',
+          ),
+          _buildBottomNavigationBarItem(
+            icon: _selectedIndex == 4
+                ? Image.asset('assets/icons/profile_green.png')
+                : Image.asset('assets/icons/profile.png'),
+            label: 'Профиль',
+          ),
+        ],
+      ),
     );
   }
 
@@ -75,25 +88,37 @@ class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
       padding: EdgeInsets.all(3),
       decoration: BoxDecoration(
         color: AppColors.white,
-        borderRadius: BorderRadius.all(Radius.circular(10.r)),
+        borderRadius: BorderRadius.all(Radius.circular(11.r)),
       ),
       child: Container(
-        height: 15.h,
-        width: 15.w,
+        height: 16.h,
+        width: 16.w,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: AppColors.pink5589_1,
-          borderRadius: BorderRadius.all(Radius.circular(10.r)),
+          borderRadius: BorderRadius.all(Radius.circular(11.r)),
         ),
         child: Text(
           '$_counter',
           style: TextStyle(
             color: AppColors.white,
-            fontSize: 12,
-            fontWeight: FontWeight.w600,
+            fontSize: 11,
+            fontWeight: FontWeight.w700,
           ),
         ),
       ),
+    );
+  }
+
+  BottomNavigationBarItem _buildBottomNavigationBarItem(
+      {required icon, required label}) {
+    return BottomNavigationBarItem(
+      icon: Container(
+        padding: EdgeInsets.only(top: 10.h),
+        alignment: Alignment.center,
+        child: icon,
+      ),
+      label: label,
     );
   }
 }

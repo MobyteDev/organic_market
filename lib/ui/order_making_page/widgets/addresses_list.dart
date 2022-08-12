@@ -42,7 +42,7 @@ class _AddressesListState extends State<AddressesList> {
           const Text(
             'Ваши адреса',
             style: TextStyle(
-              fontSize: 23,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -51,15 +51,12 @@ class _AddressesListState extends State<AddressesList> {
           const SizedBox(height: 5),
           Row(
             children: [
-              Icon(
-                Icons.add,
-                color: AppColors.green149202_1,
-              ),
+              Image.asset('assets/icons/add.png'),
               const SizedBox(width: 5),
               Text(
                 'Добавить адрес',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   color: AppColors.green149202_1,
                   fontWeight: FontWeight.bold,
                 ),
