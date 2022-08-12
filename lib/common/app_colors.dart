@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class AppColors {
   static const Color white = Colors.white;
   static const Color black = Colors.black;
+  static const Color red = Colors.red;
+  static const Color transparent = Colors.transparent;
 
   static const List<Color> cardColors = <Color>[Color.fromRGBO(252, 234, 230, 1), Color.fromRGBO(229, 230, 251, 1), Color.fromRGBO(235, 250, 228, 1)];
 
@@ -13,5 +15,9 @@ class AppColors {
   // rgba(242, 243, 240, 1)
   static const Color grey242243240_1 = Color.fromRGBO(242, 243, 240, 1);
   static const Color grey142144150_1 = Color.fromRGBO(142, 144, 150, 1);
+
   static const Color grey192192202_1 = Color.fromRGBO(192, 192, 202, 1);
+
+  static const Color grey223215215_1 = Color.fromRGBO(223, 215, 215, 1);
+
 }

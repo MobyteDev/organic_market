@@ -63,7 +63,7 @@ class ProductCard extends StatelessWidget {
                   ),
                   onPressed: () {
                     //TODO
-                    context.router.push(ProductRoute(title: "Хер"));
+                    //context.router.push(ProductRoute(title: "Хер"));
                   },
                   child: Image.asset("assets/icons/shopping_cart_white.png"),
                 ),
