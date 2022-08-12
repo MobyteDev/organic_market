@@ -5,6 +5,8 @@ import 'package:organic_market/common/app_colors.dart';
 class AppStyles {
   static const TextStyle bigHeader = TextStyle(
       fontFamily: 'YesevaOne', fontSize: 24, fontWeight: FontWeight.w400);
+  static const TextStyle bigHeader2 =
+      TextStyle(fontFamily: 'Jost', fontSize: 20, fontWeight: FontWeight.w400);
   static const TextStyle body1 =
       TextStyle(fontFamily: 'Jost', fontSize: 14, fontWeight: FontWeight.w400);
   static const TextStyle body2 =
@@ -13,6 +15,32 @@ class AppStyles {
       TextStyle(fontFamily: 'Jost', fontSize: 16, fontWeight: FontWeight.w400);
   static final TextStyle bigBody = TextStyle(
       fontFamily: 'Jost', fontSize: 16.sp, fontWeight: FontWeight.w400);
+  static const TextStyle body4 = TextStyle(
+    fontFamily: 'Jost',
+    fontSize: 13,
+    fontWeight: FontWeight.w700,
+    color: AppColors.white,
+  );
+  static const TextStyle body5 = TextStyle(
+    fontFamily: 'Jost',
+    fontSize: 13,
+    fontWeight: FontWeight.w600,
+    color: AppColors.white,
+    letterSpacing: 1.4,
+  );
+  static const TextStyle body6 = TextStyle(
+    fontFamily: 'Jost',
+    fontSize: 13,
+    fontWeight: FontWeight.w600,
+    color: AppColors.black,
+    letterSpacing: 1.4,
+  );
+  static const TextStyle body7 = TextStyle(
+    fontFamily: 'Jost',
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    letterSpacing: 0.7,
+  );
   static const TextStyle bodyGrey1 = TextStyle(
       fontFamily: 'Jost',
       fontSize: 14,
@@ -36,6 +64,11 @@ class AppStyles {
   static const TextStyle bodyGreen2 = TextStyle(
       fontFamily: 'Jost',
       fontSize: 12,
+      fontWeight: FontWeight.w500,
+      color: AppColors.green149202_1);
+  static const TextStyle bodyGreen3 = TextStyle(
+      fontFamily: 'Jost',
+      fontSize: 16,
       fontWeight: FontWeight.w500,
       color: AppColors.green149202_1);
 

@@ -4,6 +4,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
+import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/ui/common_widgets/product_card_list.dart';
 import 'package:organic_market/ui/product_page/widgets/brand.dart';
 import 'package:organic_market/ui/product_page/widgets/carousel.dart';
@@ -61,16 +62,17 @@ class ProductPage extends StatelessWidget {
                           height: 16.h,
                         ),
                         Text(
-                          title,
+                          "УГЛЕЧЕ ПОЛЕ СТЕЙК ФЛЭНК (АНГУС) охл скин",
+                          style: AppStyles.bigHeader2,
                         ),
                         SizedBox(
-                          height: 36.h,
+                          height: 30.h,
                         ),
                         const ProductDelivery(
                           deliveryTerm: "завтра",
                         ),
                         SizedBox(
-                          height: 36.h,
+                          height: 30.h,
                         ),
                         Switcher(
                           values: ["0,4кг", "1,2кг"],
@@ -103,9 +105,10 @@ class ProductPage extends StatelessWidget {
                     ),
                     Text(
                       "Рекомендуем",
+                      style: AppStyles.bigHeader2,
                     ),
                     SizedBox(
-                      height: 18.h,
+                      height: 16.h,
                     ),
                     ProductCardList(
                       isTitled: false,
@@ -137,6 +140,7 @@ class ProductPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                    
                   ],
                 ),
               ),

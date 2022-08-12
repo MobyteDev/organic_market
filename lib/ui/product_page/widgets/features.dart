@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
+import 'package:organic_market/common/app_styles.dart';
 
 class Features extends StatelessWidget {
   final String discountTitle;
@@ -33,7 +34,7 @@ class Features extends StatelessWidget {
           child: Center(
             child: Text(
               '- $discountTitle%',
-              
+              style: AppStyles.body4,
             ),
           ),
         ),
@@ -63,6 +64,7 @@ class Features extends StatelessWidget {
                     ),
                     const Text(
                       "Органик",
+                      style: AppStyles.body5,
                     ),
                   ],
                 ),
@@ -90,10 +92,11 @@ class Features extends StatelessWidget {
                       "assets/icons/delivery.png",
                     ),
                     SizedBox(
-                      width: 4.w,
+                      width: 3.w,
                     ),
                     const Text(
                       "Экспресс доставка",
+                      style: AppStyles.body6,
                     ),
                   ],
                 ),

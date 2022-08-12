@@ -25,8 +25,8 @@ class _SwitcherState extends State<Switcher>
     vsync: this,
   );
   late final Animation<Offset> _offsetAnimation = Tween<Offset>(
-    begin: Offset.zero,
-    end: const Offset(1, 0.0),
+    begin: Offset(0.023, 0.028),
+    end: const Offset(1.035, 0.028),
   ).animate(CurvedAnimation(
     parent: _controller,
     curve: Curves.linear,
@@ -58,8 +58,8 @@ class _SwitcherState extends State<Switcher>
           SlideTransition(
             position: _offsetAnimation,
             child: Container(
-              height: 35.h,
-              width: 157.w,
+              height: 39.h,
+              width: 161.w,
               decoration: BoxDecoration(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(
@@ -69,9 +69,8 @@ class _SwitcherState extends State<Switcher>
                   BoxShadow(
                     blurRadius: 10,
                     color: AppColors.grey7994115_015,
-                    offset: Offset(5, 10)
+                    offset: Offset(3, 4),
                   ),
-                  
                 ],
               ),
             ),
