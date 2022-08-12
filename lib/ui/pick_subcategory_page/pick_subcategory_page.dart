@@ -5,6 +5,7 @@ import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/data/subcategory.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
+import 'package:organic_market/ui/common_widgets/return_app_bar.dart';
 
 class PickSubcategoryPage extends StatelessWidget {
   const PickSubcategoryPage({Key? key, required this.subcategories})
@@ -15,7 +16,7 @@ class PickSubcategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: OrganicAppBar(),
+      appBar: ReturnAppBar(title: "Категория"),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: ListView.separated(

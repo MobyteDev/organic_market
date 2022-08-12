@@ -9,6 +9,7 @@ import 'package:organic_market/data/products_by_tags.dart';
 import 'package:organic_market/data/sort_enum.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/product_card_grid.dart';
+import 'package:organic_market/ui/common_widgets/return_app_bar.dart';
 
 class SubcategoryPage extends StatelessWidget {
   const SubcategoryPage({Key? key}) : super(key: key);
@@ -18,14 +19,31 @@ class SubcategoryPage extends StatelessWidget {
     return BlocProvider(
       create: (context) =>
           SubcategoryPageBloc()..add(SubcategoryPageLoadStarted()),
-      child: Scaffold(
-        appBar: OrganicAppBar(),
-        body: BlocBuilder<SubcategoryPageBloc, SubcategoryPageState>(
-          builder: (context, state) {
-            print(state);
-            if (state is SubcategoryPageLoaded) {
-              final ProductsByTags data = state.data;
-              return Padding(
+      child: BlocBuilder<SubcategoryPageBloc, SubcategoryPageState>(
+        builder: (context, state) {
+          if (state is SubcategoryPageLoaded) {
+            final ProductsByTags data = state.data;
+            return Scaffold(
+              appBar: ReturnAppBar(
+                title: "Категория",
+                children: data.tags
+                    .map((e) => OutlinedButton(
+                          onPressed: () {},
+                          child: Text(
+                            e,
+                            style: AppStyles.body2,
+                          ),
+                          style: OutlinedButton.styleFrom(
+                              foregroundColor: AppColors.black,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                          ),
+
+                        ))
+                    .toList(growable: false),
+              ),
+              body: Padding(
                 padding: EdgeInsets.all(16.0.h),
                 child: SingleChildScrollView(
                   child: Column(
@@ -39,7 +57,9 @@ class SubcategoryPage extends StatelessWidget {
                           DropdownButton(
                             onChanged: (SortEnum? value) {
                               if (value != null) {
-                                BlocProvider.of<SubcategoryPageBloc>(context).add(SubcategoryPageSortChanged(sort: value));
+                                BlocProvider.of<SubcategoryPageBloc>(context)
+                                    .add(SubcategoryPageSortChanged(
+                                        sort: value));
                               }
                             },
                             style: AppStyles.body1
@@ -71,11 +91,11 @@ class SubcategoryPage extends StatelessWidget {
                     ],
                   ),
                 ),
-              );
-            } else
-              return Center(child: Text("a"));
-          },
-        ),
+              ),
+            );
+          } else
+            return Center(child: Text("a"));
+        },
       ),
     );
   }

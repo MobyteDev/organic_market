@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/data/product_category.dart';
 import 'package:organic_market/ui/categories_page/button_section.dart';
 import 'package:organic_market/ui/categories_page/category_grid.dart';
+import 'package:organic_market/ui/common_widgets/address_app_bar.dart';
 import 'package:organic_market/ui/product_page/widgets/product_app_bar.dart';
 
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
@@ -14,7 +15,7 @@ class CategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: OrganicAppBar(),
+      appBar: AddressAppBar(title: "ул. Пушкина 15, д. 20, кв. 113"),
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 15.5,
