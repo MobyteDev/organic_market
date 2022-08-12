@@ -33,6 +33,7 @@ class Features extends StatelessWidget {
           child: Center(
             child: Text(
               '- $discountTitle%',
+              
             ),
           ),
         ),
@@ -41,7 +42,6 @@ class Features extends StatelessWidget {
         ),
         isOrganic
             ? Container(
-                
                 width: 98.w,
                 height: 24.h,
                 decoration: const BoxDecoration(
