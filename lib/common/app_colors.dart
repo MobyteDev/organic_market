@@ -4,7 +4,7 @@ class AppColors {
   static const Color white = Colors.white;
   static const Color black = Colors.black;
   static const Color transparent = Colors.transparent;
-
+  static const Color red = Colors.red;
   static const List<Color> cardColors = <Color>[Color.fromRGBO(252, 234, 230, 1), Color.fromRGBO(229, 230, 251, 1), Color.fromRGBO(235, 250, 228, 1)];
 
   static const Color pink5589_1 = Color.fromRGBO(255, 55, 89, 1);
@@ -21,5 +21,5 @@ class AppColors {
   static const Color grey7994115_015 = Color.fromRGBO(79, 94, 115, 0.15);
 
   static const Color grey209204204_1 = Color.fromRGBO(209, 204, 204, 1);
-  
+
 }
