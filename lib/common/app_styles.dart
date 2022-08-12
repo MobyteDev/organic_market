@@ -35,6 +35,12 @@ class AppStyles {
     color: AppColors.black,
     letterSpacing: 1.4,
   );
+  static const TextStyle body7 = TextStyle(
+    fontFamily: 'Jost',
+    fontSize: 16,
+    fontWeight: FontWeight.w600,
+    letterSpacing: 0.7,
+  );
   static const TextStyle bodyGrey1 = TextStyle(
       fontFamily: 'Jost',
       fontSize: 14,

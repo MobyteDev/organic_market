@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:organic_market/common/app_styles.dart';
 
 class Brand extends StatelessWidget {
   final String brandTitle;
@@ -24,12 +25,7 @@ class Brand extends StatelessWidget {
           children: [
             Text(
               'Бренд "$brandTitle"',
-              style: TextStyle(
-                fontFamily: "Jost",
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-                // letterSpacing: 1,
-              ),
+              style: AppStyles.body7,
             ),
             Image.asset(
               "assets/icons/nextArrow.png",

@@ -105,9 +105,10 @@ class ProductPage extends StatelessWidget {
                     ),
                     Text(
                       "Рекомендуем",
+                      style: AppStyles.bigHeader2,
                     ),
                     SizedBox(
-                      height: 18.h,
+                      height: 16.h,
                     ),
                     ProductCardList(
                       isTitled: false,
@@ -139,6 +140,7 @@ class ProductPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                    
                   ],
                 ),
               ),

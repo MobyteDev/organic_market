@@ -40,6 +40,8 @@ class _SpecificationsState extends State<Specifications> {
                   color: choosedPoint == SpecificationsTypes.description
                       ? AppColors.black
                       : AppColors.grey223215215_1,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
                 ),
               ),
             ),
@@ -60,6 +62,8 @@ class _SpecificationsState extends State<Specifications> {
                   color: choosedPoint == SpecificationsTypes.specifications
                       ? AppColors.black
                       : AppColors.grey223215215_1,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
                 ),
               ),
             ),
@@ -80,12 +84,12 @@ class _SpecificationsState extends State<Specifications> {
                   color: choosedPoint == SpecificationsTypes.reviews
                       ? AppColors.black
                       : AppColors.grey223215215_1,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
                 ),
               ),
             ),
             //TODO: finish when design will be done
-            
-            
           ],
         ),
         SizedBox(
