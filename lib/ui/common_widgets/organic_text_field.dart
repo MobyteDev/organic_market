@@ -16,23 +16,16 @@ class OrganicTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      child: TextFormField(
-        style: AppStyles.header2,
-        controller: controller,
-        decoration: InputDecoration(
-          labelText: labelText,
-          border: const OutlineInputBorder(
-            borderSide: BorderSide(
-              width: 0,
-              style: BorderStyle.none,
-            ),
-          ),
-          filled: true,
-          fillColor: AppColors.grey242243240_1,
-          labelStyle: AppStyles.bodyGrey3,
-          suffixIcon: suffixIcon,
-        ),
+    return TextFormField(
+      style: AppStyles.header2,
+      controller: controller,
+      decoration: InputDecoration(
+        labelText: labelText,
+        border: InputBorder.none,
+        filled: true,
+        fillColor: AppColors.grey242243240_1,
+        labelStyle: AppStyles.bodyGrey3,
+        suffixIcon: suffixIcon,
       ),
     );
   }
