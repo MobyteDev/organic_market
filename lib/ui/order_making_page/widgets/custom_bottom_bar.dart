@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/ui/common_widgets/organic_button.dart';
@@ -37,11 +38,7 @@ class CustomBottomBar extends StatelessWidget {
           OrganicButton(
             buttonLabel: buttonLabel,
             onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => const OrderSuccessPage(),
-                ),
-              );
+              context.router.pushNamed('/orderSuccess');
             },
             padding: const EdgeInsets.symmetric(
               horizontal: 100,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/organic_text_field.dart';
+import 'package:organic_market/ui/personal_data_page/widgets/personal_data_bottom_bar.dart';
 
 class PersonalDataPage extends StatelessWidget {
   final TextEditingController _nameController =
@@ -20,30 +22,31 @@ class PersonalDataPage extends StatelessWidget {
         title: 'Личные данные',
         isBack: true,
       ),
+      bottomNavigationBar: PersonalDataBottomBar(buttonLabel: 'Сохранить'),
       body: ListView(
-        padding: const EdgeInsets.only(top: 32, left: 16, right: 16),
+        padding: EdgeInsets.only(top: 32.h, left: 16.w, right: 16.w),
         children: [
           OrganicTextField(
             labelText: 'Имя',
             controller: _nameController,
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12.h),
           OrganicTextField(
             labelText: 'Фамилия',
             controller: _surnameController,
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12.h),
           OrganicTextField(
             labelText: 'Дата рождения',
             suffixIcon: Image.asset('assets/icons/calendar.png'),
             controller: _birthdayController,
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12.h),
           OrganicTextField(
             labelText: 'Телефон',
             controller: _phoneController,
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12.h),
           OrganicTextField(
             labelText: 'E-mail',
             controller: _emailController,
