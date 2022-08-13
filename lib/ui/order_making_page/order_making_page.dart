@@ -6,7 +6,7 @@ import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/order_making_page/widgets/addresses_list.dart';
 import 'package:organic_market/ui/order_making_page/widgets/custom_bottom_bar.dart';
 import 'package:organic_market/ui/order_making_page/widgets/custom_switch.dart';
-import 'package:organic_market/ui/order_making_page/widgets/custom_text_field.dart';
+import 'package:organic_market/ui/common_widgets/custom_text_field.dart';
 import 'package:organic_market/ui/order_making_page/widgets/order_making_list_tile.dart';
 import 'package:organic_market/ui/order_making_page/widgets/price_row.dart';
 import 'package:organic_market/ui/order_success_page.dart/order_success_page.dart';
@@ -58,6 +58,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
   }
 
   void _onTapMakeOrder() {
+    //context.router.pushNamed('/orderSuccess');
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => const OrderSuccessPage(),

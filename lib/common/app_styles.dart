@@ -28,6 +28,21 @@ class AppStyles {
       fontSize: 18,
       fontWeight: FontWeight.w400,
       color: AppColors.grey142144150_1);
+  static const TextStyle bodyGrey4 = TextStyle(
+      fontFamily: 'Jost',
+      fontSize: 18,
+      fontWeight: FontWeight.w500,
+      color: AppColors.grey192192202_1);
+  static const TextStyle bodyGrey5 = TextStyle(
+      fontFamily: 'Jost',
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+      color: AppColors.grey142144150_1);
+      static const TextStyle bodyGrey6 = TextStyle(
+      fontFamily: 'Jost',
+      fontSize: 18,
+      fontWeight: FontWeight.w500,
+      color: AppColors.grey142144150_1);
   static const TextStyle bodyGreen1 = TextStyle(
       fontFamily: 'Jost',
       fontSize: 14,
@@ -36,6 +51,11 @@ class AppStyles {
   static const TextStyle bodyGreen2 = TextStyle(
       fontFamily: 'Jost',
       fontSize: 12,
+      fontWeight: FontWeight.w500,
+      color: AppColors.green149202_1);
+  static const TextStyle bodyGreen3 = TextStyle(
+      fontFamily: 'Jost',
+      fontSize: 18,
       fontWeight: FontWeight.w500,
       color: AppColors.green149202_1);
 

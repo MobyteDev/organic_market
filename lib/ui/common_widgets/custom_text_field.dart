@@ -4,23 +4,24 @@ import 'package:organic_market/common/app_styles.dart';
 
 class CustomTextField extends StatelessWidget {
   final String labelText;
+  final Widget? suffixIcon;
   final TextEditingController controller;
 
   const CustomTextField({
     Key? key,
     required this.labelText,
     required this.controller,
+    this.suffixIcon,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: TextField(
-        style: const TextStyle(
-          fontSize: 17,
-        ),
+      child: TextFormField(
+        style: AppStyles.header2,
         controller: controller,
         decoration: InputDecoration(
+          labelText: labelText,
           border: const OutlineInputBorder(
             borderSide: BorderSide(
               width: 0,
@@ -28,9 +29,9 @@ class CustomTextField extends StatelessWidget {
             ),
           ),
           filled: true,
-          fillColor: Colors.grey[200],
-          labelText: labelText,
+          fillColor: AppColors.grey242243240_1,
           labelStyle: AppStyles.bodyGrey3,
+          suffixIcon: suffixIcon,
         ),
       ),
     );
