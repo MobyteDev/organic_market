@@ -28,7 +28,6 @@ class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
       selectedLabelStyle: AppStyles.header5,
       unselectedLabelStyle: AppStyles.header5,
       type: BottomNavigationBarType.fixed,
-      // currentIndex: _selectedIndex,
       currentIndex: AutoTabsRouter.of(context).activeIndex,
       onTap: _onItemTapped,
       items: [

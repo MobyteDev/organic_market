@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 
 class OrganicButton extends StatelessWidget {
@@ -18,17 +19,17 @@ class OrganicButton extends StatelessWidget {
     return Material(
       color: Colors.transparent,
       child: Ink(
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(30)),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(30.r)),
           color: Colors.white,
         ),
         child: InkWell(
-          borderRadius: const BorderRadius.all(Radius.circular(30)),
+          borderRadius: BorderRadius.all(Radius.circular(30.r)),
           onTap: onTap,
           child: Container(
             decoration: BoxDecoration(
               color: AppColors.green149202_1,
-              borderRadius: const BorderRadius.all(Radius.circular(30)),
+              borderRadius: BorderRadius.all(Radius.circular(30.r)),
             ),
             padding: padding,
             child: Text(
