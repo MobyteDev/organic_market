@@ -9,7 +9,7 @@ import 'package:organic_market/ui/main_screen/big_card.dart';
 class BigCardList extends StatelessWidget {
   const BigCardList({Key? key, required this.offers}) : super(key: key);
 
-  final List<Offer> offers;
+  final List<Offer> offers; 
 
   @override
   Widget build(BuildContext context) {

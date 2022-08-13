@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:organic_market/ui/common_widgets/custom_text_field.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
+import 'package:organic_market/ui/common_widgets/organic_text_field.dart';
 
 class PersonalDataPage extends StatelessWidget {
   final TextEditingController _nameController =
@@ -23,28 +23,28 @@ class PersonalDataPage extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.only(top: 32, left: 16, right: 16),
         children: [
-          CustomTextField(
+          OrganicTextField(
             labelText: 'Имя',
             controller: _nameController,
           ),
           const SizedBox(height: 12),
-          CustomTextField(
+          OrganicTextField(
             labelText: 'Фамилия',
             controller: _surnameController,
           ),
           const SizedBox(height: 12),
-          CustomTextField(
+          OrganicTextField(
             labelText: 'Дата рождения',
             suffixIcon: Image.asset('assets/icons/calendar.png'),
             controller: _birthdayController,
           ),
           const SizedBox(height: 12),
-          CustomTextField(
+          OrganicTextField(
             labelText: 'Телефон',
             controller: _phoneController,
           ),
           const SizedBox(height: 12),
-          CustomTextField(
+          OrganicTextField(
             labelText: 'E-mail',
             controller: _emailController,
           ),

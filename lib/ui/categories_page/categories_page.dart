@@ -15,7 +15,10 @@ class CategoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AddressAppBar(title: "ул. Пушкина 15, д. 20, кв. 113"),
+      appBar: OrganicAppBar(
+        title: "ул. Пушкина 15, д. 20, кв. 113",
+        prefixIcon: Image.asset('assets/icons/green_car.png'),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 15.5,
@@ -24,42 +27,49 @@ class CategoriesPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 17.h,),
-              ButtonSection(alreadyBought: (){}, discounts: (){}, favorite: (){}),
-              SizedBox(height: 32.h,),
+              SizedBox(
+                height: 17.h,
+              ),
+              ButtonSection(
+                  alreadyBought: () {}, discounts: () {}, favorite: () {}),
+              SizedBox(
+                height: 32.h,
+              ),
               CategoryGrid(
                 categories: [
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
-                  ProductCategory("Молочные продукты, яйцо",
-                      "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                  ProductCategory(
+                      "Молочные продукты, яйцо", "assets/images/category.png"),
                 ],
               ),
-              SizedBox(height: 37.h,)
+              SizedBox(
+                height: 37.h,
+              )
             ],
           ),
         ),

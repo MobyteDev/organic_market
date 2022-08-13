@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
@@ -14,12 +15,8 @@ class OrganicNavigationBar extends StatefulWidget {
 class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
   final int _counter = 3;
 
-  int _selectedIndex = 0;
-
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    AutoTabsRouter.of(context).setActiveIndex(index);
   }
 
   @override
@@ -31,28 +28,31 @@ class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
       selectedLabelStyle: AppStyles.header5,
       unselectedLabelStyle: AppStyles.header5,
       type: BottomNavigationBarType.fixed,
-      currentIndex: _selectedIndex,
+      // currentIndex: _selectedIndex,
+      currentIndex: AutoTabsRouter.of(context).activeIndex,
       onTap: _onItemTapped,
       items: [
         _buildBottomNavigationBarItem(
-          icon: Image.asset(
-            _selectedIndex == 0
-                ? 'assets/icons/main_green.png'
-                : 'assets/icons/main.png',
-          ),
+          icon: AutoTabsRouter.of(context).activeIndex == 0
+              ? Image.asset('assets/icons/main_green.png')
+              : Image.asset('assets/icons/main.png'),
           label: 'Главная',
         ),
         _buildBottomNavigationBarItem(
           icon: Image.asset(
             'assets/icons/catalog.png',
-            color: _selectedIndex == 1 ? AppColors.green149202_1 : null,
+            color: AutoTabsRouter.of(context).activeIndex == 1
+                ? AppColors.green149202_1
+                : null,
           ),
           label: 'Каталог',
         ),
         _buildBottomNavigationBarItem(
           icon: Image.asset(
             'assets/icons/search.png',
-            color: _selectedIndex == 2 ? AppColors.green149202_1 : null,
+            color: AutoTabsRouter.of(context).activeIndex == 2
+                ? AppColors.green149202_1
+                : null,
           ),
           label: 'Поиск',
         ),
@@ -64,7 +64,9 @@ class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
                 alignment: Alignment.center,
                 child: Image.asset(
                   'assets/icons/cart.png',
-                  color: _selectedIndex == 3 ? AppColors.green149202_1 : null,
+                  color: AutoTabsRouter.of(context).activeIndex == 3
+                      ? AppColors.green149202_1
+                      : null,
                 ),
               ),
               Positioned(
@@ -78,7 +80,9 @@ class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
         _buildBottomNavigationBarItem(
           icon: Image.asset(
             'assets/icons/profile.png',
-            color: _selectedIndex == 4 ? AppColors.green149202_1 : null,
+            color: AutoTabsRouter.of(context).activeIndex == 4
+                ? AppColors.green149202_1
+                : null,
           ),
           label: 'Профиль',
         ),

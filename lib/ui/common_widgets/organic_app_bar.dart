@@ -6,9 +6,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OrganicAppBar extends StatelessWidget with PreferredSizeWidget {
   final String title;
-  final Widget? prefixIcon;
-  final bool isBack;
-  final List<Widget>? actions;
+  final Widget? prefixIcon; // Иконка перед заголовком
+  final bool isBack; // Наличие слева стрелки "назад"
+  final List<Widget>? actions; // Иконки справа
 
   const OrganicAppBar({
     Key? key,

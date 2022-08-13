@@ -5,10 +5,15 @@ import 'package:organic_market/data/product.dart';
 import 'package:organic_market/ui/common_widgets/product_card.dart';
 
 class ProductCardList extends StatelessWidget {
-  const ProductCardList({Key? key, required this.title, required this.products})
-      : super(key: key);
+  const ProductCardList({
+    Key? key,
+    this.title,
+    required this.products,
+    required this.isTitled,
+  }) : super(key: key);
 
-  final String title;
+  final String? title;
+  final bool isTitled;
   final List<Product> products;
 
   @override
@@ -17,13 +22,13 @@ class ProductCardList extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
-          Align(
+          isTitled ? Align(
             alignment: Alignment.centerLeft,
             child: Text(
-              title,
+              title!,
               style: AppStyles.bigHeader,
             ),
-          ),
+          ) : Container(),
           SizedBox(height: 0.02.sh),
           SizedBox(
             height: 0.3.sh,

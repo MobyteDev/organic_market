@@ -14,7 +14,6 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       decoration: BoxDecoration(
         color: AppColors.white,
@@ -24,7 +23,7 @@ class ProductCard extends StatelessWidget {
             color: AppColors.grey242243240_1,
             spreadRadius: 5,
             blurRadius: 10,
-            offset: Offset(0,5),
+            offset: Offset(0, 5),
             //blurStyle: BlurStyle.outer,
           ),
         ],
@@ -32,7 +31,8 @@ class ProductCard extends StatelessWidget {
       height: 0.30.sh,
       width: 0.45.sw,
       child: Padding(
-        padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 6.0, bottom: 6.0),
+        padding:
+            const EdgeInsets.only(left: 8.0, right: 8.0, top: 6.0, bottom: 6.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -63,7 +63,7 @@ class ProductCard extends StatelessWidget {
                   ),
                   onPressed: () {
                     //TODO
-                    //context.router.push(ProductRoute(title: "Хер"));
+                    context.router.push(ProductPageRoute(title: "Говядина"));
                   },
                   child: Image.asset("assets/icons/shopping_cart_white.png"),
                 ),
