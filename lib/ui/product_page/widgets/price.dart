@@ -23,10 +23,13 @@ class Price extends StatelessWidget {
         children: [
           Column(
             children: [
-              RichText(text: TextSpan())
+              RichText(
+                text: TextSpan(
+                  
+                ),
+              )
             ],
           ),
-          
         ],
       ),
     );
