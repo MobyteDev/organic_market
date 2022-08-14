@@ -5,13 +5,15 @@ import 'package:organic_market/common/app_colors.dart';
 class OrganicButton extends StatelessWidget {
   final String buttonLabel;
   final void Function() onTap;
-  final EdgeInsets padding;
+  final double height;
+  final double width;
 
   const OrganicButton({
     Key? key,
     required this.buttonLabel,
     required this.onTap,
-    this.padding = const EdgeInsets.all(20),
+    required this.height,
+    required this.width,
   }) : super(key: key);
 
   @override
@@ -27,11 +29,13 @@ class OrganicButton extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(30.r)),
           onTap: onTap,
           child: Container(
+            height: height,
+            width: width,
+            alignment: Alignment.center,
             decoration: BoxDecoration(
               color: AppColors.green149202_1,
               borderRadius: BorderRadius.all(Radius.circular(30.r)),
             ),
-            padding: padding,
             child: Text(
               buttonLabel,
               style: const TextStyle(

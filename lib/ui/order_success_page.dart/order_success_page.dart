@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/ui/common_widgets/organic_button.dart';
@@ -42,10 +43,8 @@ class OrderSuccessPage extends StatelessWidget {
             OrganicButton(
               buttonLabel: 'Продолжить покупки',
               onTap: () {},
-              padding: const EdgeInsets.symmetric(
-                horizontal: 30,
-                vertical: 15,
-              ),
+              height: 47.h,
+              width: 211.w,
             )
           ],
         ),

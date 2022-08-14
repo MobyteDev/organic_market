@@ -14,14 +14,14 @@
 import 'package:auto_route/auto_route.dart' as _i9;
 import 'package:flutter/material.dart' as _i10;
 
-import '../ui/categories_page/categories_page.dart' as _i7;
+import '../ui/categories_page/categories_page.dart' as _i6;
 import '../ui/home_page/home_page.dart' as _i1;
-import '../ui/main_screen/main_screen.dart' as _i6;
-import '../ui/order_making_page/order_making_page.dart' as _i3;
-import '../ui/order_success_page.dart/order_success_page.dart' as _i4;
-import '../ui/personal_data_page/personal_data_page.dart' as _i5;
+import '../ui/main_screen/main_screen.dart' as _i5;
+import '../ui/order_making_page/order_making_page.dart' as _i8;
+import '../ui/order_success_page.dart/order_success_page.dart' as _i3;
+import '../ui/personal_data_page/personal_data_page.dart' as _i4;
 import '../ui/product_page/product_page.dart' as _i2;
-import '../ui/profile_page/profile_page.dart' as _i8;
+import '../ui/profile_page/profile_page.dart' as _i7;
 
 class AutoRouter extends _i9.RootStackRouter {
   AutoRouter([_i10.GlobalKey<_i10.NavigatorState>? navigatorKey])
@@ -39,31 +39,31 @@ class AutoRouter extends _i9.RootStackRouter {
           routeData: routeData,
           child: _i2.ProductPage(key: args.key, title: args.title));
     },
-    OrderMakingPageRoute.name: (routeData) {
-      return _i9.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i3.OrderMakingPage());
-    },
     OrderSuccessPageRoute.name: (routeData) {
       return _i9.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i4.OrderSuccessPage());
+          routeData: routeData, child: const _i3.OrderSuccessPage());
     },
     PersonalDataPageRoute.name: (routeData) {
       final args = routeData.argsAs<PersonalDataPageRouteArgs>(
           orElse: () => const PersonalDataPageRouteArgs());
       return _i9.MaterialPageX<dynamic>(
-          routeData: routeData, child: _i5.PersonalDataPage(key: args.key));
+          routeData: routeData, child: _i4.PersonalDataPage(key: args.key));
     },
     MainPageRoute.name: (routeData) {
       return _i9.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i6.MainPage());
+          routeData: routeData, child: const _i5.MainPage());
     },
     CategoriesPageRoute.name: (routeData) {
       return _i9.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i7.CategoriesPage());
+          routeData: routeData, child: const _i6.CategoriesPage());
     },
     ProfilePageRoute.name: (routeData) {
       return _i9.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i8.ProfilePage());
+          routeData: routeData, child: const _i7.ProfilePage());
+    },
+    OrderMakingPageRoute.name: (routeData) {
+      return _i9.MaterialPageX<dynamic>(
+          routeData: routeData, child: _i8.OrderMakingPage());
     }
   };
 
@@ -80,10 +80,11 @@ class AutoRouter extends _i9.RootStackRouter {
           _i9.RouteConfig(CategoriesPageRoute.name,
               path: 'categories', parent: HomePageRoute.name),
           _i9.RouteConfig(ProfilePageRoute.name,
-              path: 'profile', parent: HomePageRoute.name)
+              path: 'profile', parent: HomePageRoute.name),
+          _i9.RouteConfig(OrderMakingPageRoute.name,
+              path: 'orderMaking', parent: HomePageRoute.name)
         ]),
         _i9.RouteConfig(ProductPageRoute.name, path: '/product'),
-        _i9.RouteConfig(OrderMakingPageRoute.name, path: '/orderMaking'),
         _i9.RouteConfig(OrderSuccessPageRoute.name, path: '/orderSuccess'),
         _i9.RouteConfig(PersonalDataPageRoute.name, path: '/personalData')
       ];
@@ -123,16 +124,7 @@ class ProductPageRouteArgs {
 }
 
 /// generated route for
-/// [_i3.OrderMakingPage]
-class OrderMakingPageRoute extends _i9.PageRouteInfo<void> {
-  const OrderMakingPageRoute()
-      : super(OrderMakingPageRoute.name, path: '/orderMaking');
-
-  static const String name = 'OrderMakingPageRoute';
-}
-
-/// generated route for
-/// [_i4.OrderSuccessPage]
+/// [_i3.OrderSuccessPage]
 class OrderSuccessPageRoute extends _i9.PageRouteInfo<void> {
   const OrderSuccessPageRoute()
       : super(OrderSuccessPageRoute.name, path: '/orderSuccess');
@@ -141,7 +133,7 @@ class OrderSuccessPageRoute extends _i9.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i5.PersonalDataPage]
+/// [_i4.PersonalDataPage]
 class PersonalDataPageRoute
     extends _i9.PageRouteInfo<PersonalDataPageRouteArgs> {
   PersonalDataPageRoute({_i10.Key? key})
@@ -163,7 +155,7 @@ class PersonalDataPageRouteArgs {
 }
 
 /// generated route for
-/// [_i6.MainPage]
+/// [_i5.MainPage]
 class MainPageRoute extends _i9.PageRouteInfo<void> {
   const MainPageRoute() : super(MainPageRoute.name, path: 'mainPage');
 
@@ -171,7 +163,7 @@ class MainPageRoute extends _i9.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i7.CategoriesPage]
+/// [_i6.CategoriesPage]
 class CategoriesPageRoute extends _i9.PageRouteInfo<void> {
   const CategoriesPageRoute()
       : super(CategoriesPageRoute.name, path: 'categories');
@@ -180,9 +172,18 @@ class CategoriesPageRoute extends _i9.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i8.ProfilePage]
+/// [_i7.ProfilePage]
 class ProfilePageRoute extends _i9.PageRouteInfo<void> {
   const ProfilePageRoute() : super(ProfilePageRoute.name, path: 'profile');
 
   static const String name = 'ProfilePageRoute';
+}
+
+/// generated route for
+/// [_i8.OrderMakingPage]
+class OrderMakingPageRoute extends _i9.PageRouteInfo<void> {
+  const OrderMakingPageRoute()
+      : super(OrderMakingPageRoute.name, path: 'orderMaking');
+
+  static const String name = 'OrderMakingPageRoute';
 }

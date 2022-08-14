@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/data/address_settings.dart';
 
@@ -27,7 +28,7 @@ class AddressesListTile extends StatelessWidget {
                       color: Colors.grey,
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  SizedBox(height: 10.h),
                   Text(
                     addressSettings.address,
                     style: const TextStyle(
@@ -45,7 +46,7 @@ class AddressesListTile extends StatelessWidget {
         ),
         Divider(
           color: AppColors.grey242243240_1,
-          height: 20,
+          height: 20.h,
           thickness: 1,
         ),
       ],

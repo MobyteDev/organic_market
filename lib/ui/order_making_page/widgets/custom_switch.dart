@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:organic_market/common/app_colors.dart';
 
@@ -15,11 +16,11 @@ class CustomSwitch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlutterSwitch(
-      width: 43,
-      height: 25,
-      toggleSize: 15,
-      borderRadius: 20,
-      padding: 5,
+      width: 43.w,
+      height: 25.h,
+      toggleSize: 15.r,
+      borderRadius: 20.r,
+      padding: 5.h,
       inactiveColor: AppColors.grey242243240_1,
       activeColor: AppColors.green149202_1,
       value: value,

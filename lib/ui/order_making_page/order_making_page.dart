@@ -1,10 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/data/address_settings.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/order_making_page/widgets/addresses_list.dart';
-import 'package:organic_market/ui/order_making_page/widgets/custom_bottom_bar.dart';
+import 'package:organic_market/ui/order_making_page/widgets/order_making_bottom_bar.dart';
 import 'package:organic_market/ui/order_making_page/widgets/custom_switch.dart';
 import 'package:organic_market/ui/common_widgets/organic_text_field.dart';
 import 'package:organic_market/ui/order_making_page/widgets/order_making_list_tile.dart';
@@ -13,7 +14,7 @@ import 'package:organic_market/ui/order_success_page.dart/order_success_page.dar
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OrderMakingPage extends StatefulWidget {
-  const OrderMakingPage({Key? key}) : super(key: key);
+  OrderMakingPage({Key? key}) : super(key: key);
 
   @override
   State<OrderMakingPage> createState() => _OrderMakingPageState();
@@ -58,12 +59,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
   }
 
   void _onTapMakeOrder() {
-    //context.router.pushNamed('/orderSuccess');
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) => const OrderSuccessPage(),
-      ),
-    );
+    context.router.pushNamed('/orderSuccess');
   }
 
   @override
@@ -73,14 +69,14 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
         title: 'Оформление заказа',
         isBack: true,
       ),
-      bottomNavigationBar: CustomBottomBar(
+      bottomNavigationBar: OrderMakingBottomBar(
         buttonLabel: 'Оформить заказ',
         onTapButton: _onTapMakeOrder,
         label: 'Нажимая "Оформить заказ", вы принимаете условия',
         textButtonLabel: 'Публичной оферты',
       ),
       body: ListView(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(20.h),
         children: [
           GestureDetector(
             onTap: _onTapAddresses,
@@ -89,27 +85,27 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
               subtitle: _address,
             ),
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 15.h),
           OrderMakingListTile(
             title: 'Дата и время доставки',
             subtitle: '$_date в $_time',
           ),
-          const SizedBox(height: 15),
+          SizedBox(height: 15.h),
           OrderMakingListTile(
             title: 'Способ оплаты',
             subtitle: _paymentMethod,
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10.h),
           Row(
             children: [
               Expanded(
                 child: Row(
                   children: [
-                    const Text(
+                    Text(
                       'Списать баллы',
                       style: AppStyles.body3,
                     ),
-                    const SizedBox(width: 5),
+                    SizedBox(width: 5.w),
                     Image.asset('assets/icons/help.png')
                   ],
                 ),
@@ -126,31 +122,31 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
               ),
             ],
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10.h),
           OrganicTextField(
             labelText: 'Комментарий',
             controller: _controller,
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10.h),
           PriceRow(
             title: '$_goodsNumber товара',
             titleColor: AppColors.grey142144150_1,
             value: '$_price ₽',
           ),
-          const SizedBox(height: 5),
+          SizedBox(height: 5.h),
           PriceRow(
             title: 'Скидка $_sale%',
             titleColor: AppColors.pink5589_1,
             value: '-$_salePrice ₽',
             valueColor: AppColors.pink5589_1,
           ),
-          const SizedBox(height: 5),
+          SizedBox(height: 5),
           PriceRow(
             title: 'Доставка',
             titleColor: AppColors.grey142144150_1,
             value: '$_deliveryPrice ₽',
           ),
-          const SizedBox(height: 15),
+          SizedBox(height: 15.h),
           PriceRow(
             title: 'Итого',
             titleSize: 24,

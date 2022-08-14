@@ -28,10 +28,14 @@ import '../ui/main_screen/main_screen.dart';
           page: ProfilePage,
           path: 'profile',
         ),
+        MaterialRoute( // Временно!!! Потом удалить
+          page: OrderMakingPage,
+          path: 'orderMaking',
+        ),
       ],
     ),
     MaterialRoute(page: ProductPage, path: '/product'),
-    MaterialRoute(page: OrderMakingPage, path: '/orderMaking'),
+    // MaterialRoute(page: OrderMakingPage, path: '/orderMaking'), // Потом вернуть
     MaterialRoute(page: OrderSuccessPage, path: '/orderSuccess'),
     MaterialRoute(page: PersonalDataPage, path: '/personalData'),
   ],
