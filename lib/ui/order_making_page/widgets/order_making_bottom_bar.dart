@@ -21,7 +21,7 @@ class OrderMakingBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 140.h,
+      height: 134.h,
       padding: EdgeInsets.all(15.h),
       decoration: BoxDecoration(
         color: Colors.white,

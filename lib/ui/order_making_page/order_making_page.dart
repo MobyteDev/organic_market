@@ -27,7 +27,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
   final String _paymentMethod = 'Банковской картой';
   final int _goodsNumber = 3;
   final int _price = 1850;
-  final int _sale = 10;
+  final int? _sale = 10;
   final int _salePrice = 150;
   final int _deliveryPrice = 99;
   final int _finalPrice = 1799;
@@ -58,6 +58,10 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
     );
   }
 
+  void _onTapDate() {}
+
+  void _onTapPaymentMethod() {}
+
   void _onTapMakeOrder() {
     context.router.pushNamed('/orderSuccess');
   }
@@ -76,26 +80,27 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
         textButtonLabel: 'Публичной оферты',
       ),
       body: ListView(
-        padding: EdgeInsets.all(20.h),
+        padding:
+            EdgeInsets.only(top: 22.5.h, left: 16.h, right: 16.h, bottom: 16),
         children: [
-          GestureDetector(
-            onTap: _onTapAddresses,
-            child: OrderMakingListTile(
-              title: 'Адрес доставки',
-              subtitle: _address,
-            ),
-          ),
-          SizedBox(height: 15.h),
           OrderMakingListTile(
+            onTap: _onTapAddresses,
+            title: 'Адрес доставки',
+            subtitle: _address,
+          ),
+          SizedBox(height: 12.h),
+          OrderMakingListTile(
+            onTap: _onTapDate,
             title: 'Дата и время доставки',
             subtitle: '$_date в $_time',
           ),
-          SizedBox(height: 15.h),
+          SizedBox(height: 12.h),
           OrderMakingListTile(
+            onTap: _onTapPaymentMethod,
             title: 'Способ оплаты',
             subtitle: _paymentMethod,
           ),
-          SizedBox(height: 10.h),
+          SizedBox(height: 12.5.h),
           Row(
             children: [
               Expanded(
@@ -105,7 +110,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
                       'Списать баллы',
                       style: AppStyles.body3,
                     ),
-                    SizedBox(width: 5.w),
+                    SizedBox(width: 7.w),
                     Image.asset('assets/icons/help.png')
                   ],
                 ),
@@ -122,31 +127,34 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
               ),
             ],
           ),
-          SizedBox(height: 10.h),
+          SizedBox(height: 12.5.h),
           OrganicTextField(
             labelText: 'Комментарий',
             controller: _controller,
+            isFloatingLabel: false,
           ),
-          SizedBox(height: 10.h),
+          SizedBox(height: 16.h),
           PriceRow(
             title: '$_goodsNumber товара',
             titleColor: AppColors.grey142144150_1,
             value: '$_price ₽',
           ),
-          SizedBox(height: 5.h),
-          PriceRow(
-            title: 'Скидка $_sale%',
-            titleColor: AppColors.pink5589_1,
-            value: '-$_salePrice ₽',
-            valueColor: AppColors.pink5589_1,
-          ),
-          SizedBox(height: 5),
+          SizedBox(height: 4.h),
+          (_sale == null || _sale == 0)
+              ? Container()
+              : PriceRow(
+                  title: 'Скидка $_sale%',
+                  titleColor: AppColors.pink5589_1,
+                  value: '-$_salePrice ₽',
+                  valueColor: AppColors.pink5589_1,
+                ),
+          SizedBox(height: 4.h),
           PriceRow(
             title: 'Доставка',
             titleColor: AppColors.grey142144150_1,
             value: '$_deliveryPrice ₽',
           ),
-          SizedBox(height: 15.h),
+          SizedBox(height: 16.h),
           PriceRow(
             title: 'Итого',
             titleSize: 24,

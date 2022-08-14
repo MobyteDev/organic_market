@@ -6,12 +6,14 @@ class OrganicTextField extends StatelessWidget {
   final String labelText;
   final Widget? suffixIcon;
   final TextEditingController controller;
+  final bool isFloatingLabel;
 
   const OrganicTextField({
     Key? key,
     required this.labelText,
     required this.controller,
     this.suffixIcon,
+    this.isFloatingLabel = true, // Будет ли лейбл подниматься вверх
   }) : super(key: key);
 
   @override
@@ -22,7 +24,12 @@ class OrganicTextField extends StatelessWidget {
         controller: controller,
         decoration: InputDecoration(
           labelText: labelText,
-          border: InputBorder.none,
+          border: isFloatingLabel
+              ? InputBorder.none
+              : const OutlineInputBorder(borderSide: BorderSide.none),
+          floatingLabelBehavior: isFloatingLabel
+              ? FloatingLabelBehavior.auto
+              : FloatingLabelBehavior.never,
           filled: true,
           fillColor: AppColors.grey242243240_1,
           labelStyle: AppStyles.bodyGrey3,
