@@ -22,12 +22,7 @@ class OrganicTextField extends StatelessWidget {
         controller: controller,
         decoration: InputDecoration(
           labelText: labelText,
-          border: const OutlineInputBorder(
-            borderSide: BorderSide(
-              width: 0,
-              style: BorderStyle.none,
-            ),
-          ),
+          border: InputBorder.none,
           filled: true,
           fillColor: AppColors.grey242243240_1,
           labelStyle: AppStyles.bodyGrey3,
