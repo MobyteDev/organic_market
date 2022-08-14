@@ -28,7 +28,7 @@ class ProfilePage extends StatelessWidget {
           Text(_name, style: AppStyles.header4),
           SizedBox(height: 3.h),
           Text(_phone, style: AppStyles.bodyGrey4),
-          SizedBox(height: 20.h),
+          SizedBox(height: 18.h),
           BonusPoints(level: _level, points: _points),
           SizedBox(height: 20.h),
           ProfileList(),

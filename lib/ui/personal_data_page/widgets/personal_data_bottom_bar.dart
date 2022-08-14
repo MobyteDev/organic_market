@@ -4,8 +4,11 @@ import 'package:organic_market/ui/common_widgets/organic_button.dart';
 
 class PersonalDataBottomBar extends StatelessWidget {
   final String buttonLabel;
-  
-  const PersonalDataBottomBar({Key? key, required this.buttonLabel}) : super(key: key);
+
+  const PersonalDataBottomBar({Key? key, required this.buttonLabel})
+      : super(key: key);
+
+  void _onTapSave() {}
 
   @override
   Widget build(BuildContext context) {
@@ -26,11 +29,9 @@ class PersonalDataBottomBar extends StatelessWidget {
         children: [
           OrganicButton(
             buttonLabel: buttonLabel,
-            onTap: () {},
-            padding: EdgeInsets.symmetric(
-              horizontal: 130.w,
-              vertical: 20.h,
-            ),
+            onTap: _onTapSave,
+            height: 58.h,
+            width: 343.w,
           ),
         ],
       ),

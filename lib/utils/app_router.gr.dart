@@ -40,8 +40,10 @@ class AutoRouter extends _i9.RootStackRouter {
           child: _i2.ProductPage(key: args.key, title: args.title));
     },
     OrderMakingPageRoute.name: (routeData) {
+      final args = routeData.argsAs<OrderMakingPageRouteArgs>(
+          orElse: () => const OrderMakingPageRouteArgs());
       return _i9.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i3.OrderMakingPage());
+          routeData: routeData, child: _i3.OrderMakingPage(key: args.key));
     },
     OrderSuccessPageRoute.name: (routeData) {
       return _i9.MaterialPageX<dynamic>(
@@ -124,11 +126,23 @@ class ProductPageRouteArgs {
 
 /// generated route for
 /// [_i3.OrderMakingPage]
-class OrderMakingPageRoute extends _i9.PageRouteInfo<void> {
-  const OrderMakingPageRoute()
-      : super(OrderMakingPageRoute.name, path: '/orderMaking');
+class OrderMakingPageRoute extends _i9.PageRouteInfo<OrderMakingPageRouteArgs> {
+  OrderMakingPageRoute({_i10.Key? key})
+      : super(OrderMakingPageRoute.name,
+            path: '/orderMaking', args: OrderMakingPageRouteArgs(key: key));
 
   static const String name = 'OrderMakingPageRoute';
+}
+
+class OrderMakingPageRouteArgs {
+  const OrderMakingPageRouteArgs({this.key});
+
+  final _i10.Key? key;
+
+  @override
+  String toString() {
+    return 'OrderMakingPageRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for
