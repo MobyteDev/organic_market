@@ -17,7 +17,9 @@ class ProfileList extends StatelessWidget {
         ),
         ProfileListTile(
           title: 'Мои заказы',
-          onTap: () {},
+          onTap: () {
+            context.router.pushNamed('/myOrders');
+          },
         ),
         ProfileListTile(
           title: 'Мои адреса',

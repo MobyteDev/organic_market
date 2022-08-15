@@ -11,6 +11,7 @@ class AppColors {
   static const Color green14119863_1 = Color.fromRGBO(141, 198, 63, 1);
   static const Color yellow2210_1 = Color.fromRGBO(255, 221, 0, 1);
   static const Color green149202_1 = Color.fromRGBO(149, 202, 0, 1);
+  static const Color green1492020_0_1 = Color.fromRGBO(149, 202, 0, 0.1);
   static const Color grey242243240_1 = Color.fromRGBO(242, 243, 240, 1);
   static const Color grey142144150_1 = Color.fromRGBO(142, 144, 150, 1);
   static const Color grey112232_006 = Color.fromRGBO(11, 22, 32, 0.06);
@@ -22,5 +23,8 @@ class AppColors {
   static const Color grey7994115_015 = Color.fromRGBO(79, 94, 115, 0.15);
 
   static const Color grey209204204_1 = Color.fromRGBO(209, 204, 204, 1);
+  static const Color grey160160160_1 = Color.fromRGBO(160, 160, 160, 1);
 
+  static const Color blue55115231_0_1 = Color.fromRGBO(55, 115, 231, 0.1);
+  static const Color blue55115231_1 = Color.fromRGBO(55, 115, 231, 1);
 }

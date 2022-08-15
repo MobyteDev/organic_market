@@ -17,36 +17,44 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OrganicAppBar(title: 'Профиль'),
-      body: ListView(
+      body: Padding(
         padding: EdgeInsets.only(
           top: 32.h,
           left: 16.w,
           right: 16.w,
           bottom: 21.h,
         ),
-        children: [
-          Text(_name, style: AppStyles.header4),
-          SizedBox(height: 3.h),
-          Text(_phone, style: AppStyles.bodyGrey4),
-          SizedBox(height: 18.h),
-          BonusPoints(level: _level, points: _points),
-          SizedBox(height: 20.h),
-          ProfileList(),
-          Expanded(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                SizedBox(
-                  // Для выравнения строки
-                  height: 26.h,
-                  child: Image.asset('assets/icons/exit.png'),
-                ),
-                SizedBox(width: 5.w),
-                Text('Выйти', style: AppStyles.bodyGrey6),
-              ],
+        child: CustomScrollView(
+          slivers: [
+            SliverFillRemaining(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(_name, style: AppStyles.header4),
+                  SizedBox(height: 3.h),
+                  Text(_phone, style: AppStyles.bodyGrey4),
+                  SizedBox(height: 18.h),
+                  BonusPoints(level: _level, points: _points),
+                  SizedBox(height: 20.h),
+                  ProfileList(),
+                  Spacer(),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      SizedBox(
+                        // Для выравнения строки
+                        height: 26.h,
+                        child: Image.asset('assets/icons/exit.png'),
+                      ),
+                      SizedBox(width: 5.w),
+                      Text('Выйти', style: AppStyles.bodyGrey6),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          )
-        ],
+          ],
+        ),
       ),
     );
   }
