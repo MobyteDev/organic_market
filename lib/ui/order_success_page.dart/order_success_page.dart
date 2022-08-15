@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:organic_market/common/app_colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/ui/common_widgets/organic_button.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
@@ -23,29 +23,27 @@ class OrderSuccessPage extends StatelessWidget {
               'Заказ успешно оформлен',
               style: AppStyles.header4,
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 9.h),
             Text(
               'Номер заказа: $_orderNumber',
               style: AppStyles.bodyGrey1,
             ),
-            const SizedBox(height: 5),
+            SizedBox(height: 2.h),
             Text(
               '$_goodsNumber товара на сумму $_price ₽',
               style: AppStyles.bodyGrey1,
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 9.h),
             Text(
               'Открыть детали заказа',
               style: AppStyles.bodyGreen1,
             ),
-            const SizedBox(height: 25),
+            SizedBox(height: 24.h),
             OrganicButton(
               buttonLabel: 'Продолжить покупки',
               onTap: () {},
-              padding: const EdgeInsets.symmetric(
-                horizontal: 30,
-                vertical: 15,
-              ),
+              height: 47.h,
+              width: 211.w,
             )
           ],
         ),

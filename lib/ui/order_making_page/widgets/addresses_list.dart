@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
+import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/data/address_settings.dart';
 import 'package:organic_market/ui/order_making_page/widgets/addresses_list_tile.dart';
 
@@ -25,41 +27,33 @@ class _AddressesListState extends State<AddressesList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(
-        top: 15,
-        left: 20,
-        right: 20,
+      padding: EdgeInsets.only(
+        top: 15.h,
+        left: 16.w,
+        right: 16.w,
       ),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20.h)),
         color: Colors.white,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Center(child: _buildHandle()),
-          const SizedBox(height: 30),
+          SizedBox(height: 24.h),
           const Text(
             'Ваши адреса',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+            style: AppStyles.header7,
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: 16.h),
           ..._buildList(),
-          const SizedBox(height: 5),
           Row(
             children: [
               Image.asset('assets/icons/add.png'),
-              const SizedBox(width: 5),
+              SizedBox(width: 5.w),
               Text(
                 'Добавить адрес',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: AppColors.green149202_1,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: AppStyles.bodyGreen3,
               )
             ],
           ),
@@ -72,10 +66,10 @@ class _AddressesListState extends State<AddressesList> {
     return FractionallySizedBox(
       widthFactor: 0.11,
       child: Container(
-        height: 5,
+        height: 5.h,
         decoration: BoxDecoration(
           color: AppColors.grey242243240_1,
-          borderRadius: const BorderRadius.all(Radius.circular(2.5)),
+          borderRadius: BorderRadius.all(Radius.circular(2.5.r)),
         ),
       ),
     );

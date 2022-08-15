@@ -13,12 +13,7 @@ class ProfileList extends StatelessWidget {
         ProfileListTile(
           title: 'Личные данные',
           onTap: () {
-            //context.router.pushNamed('/profile');
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => PersonalDataPage(),
-              ),
-            );
+            context.router.pushNamed('/personalData');
           },
         ),
         ProfileListTile(

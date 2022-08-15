@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp.router(
           title: 'Flutter Demo',
           theme: ThemeData(
-            appBarTheme:  AppBarTheme(
+            appBarTheme: AppBarTheme(
               centerTitle: true,
               elevation: 0,
               shape: RoundedRectangleBorder(
@@ -47,24 +47,5 @@ class MyApp extends StatelessWidget {
         );
       },
     );
-    // return MaterialApp(
-    //   theme: ThemeData(
-    //     appBarTheme: AppBarTheme(
-    //       centerTitle: true,
-    //       elevation: 0,
-    //       shape: RoundedRectangleBorder(
-    //         borderRadius: BorderRadius.only(
-    //           bottomRight: Radius.circular(10),
-    //           bottomLeft: Radius.circular(10),
-    //         ),
-    //       ),
-    //       backgroundColor: AppColors.white,
-    //       titleTextStyle: AppStyles.header6,
-    //     ),
-    //     // fontFamily: "Jost",
-    //     primarySwatch: Colors.blue,
-    //   ),
-    //   home: ProfilePage(),
-    // );
   }
 }
