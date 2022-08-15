@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
-import 'package:organic_market/ui/main_screen/main_screen.dart';
-import 'package:organic_market/ui/order_making_page/order_making_page.dart';
-import 'package:organic_market/ui/product_page/product_page.dart';
-import 'package:organic_market/ui/profile_page/profile_page.dart';
-
+import 'package:organic_market/di/locator.dart';
 import 'package:organic_market/utils/app_router.gr.dart';
 
+
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  initDependencies();
   runApp(MyApp());
 }
 
