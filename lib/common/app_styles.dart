@@ -71,7 +71,7 @@ class AppStyles {
       fontSize: 18,
       fontWeight: FontWeight.w500,
       color: AppColors.grey142144150_1);
-      static const TextStyle bodyGrey7 = TextStyle(
+  static const TextStyle bodyGrey7 = TextStyle(
       fontFamily: 'Jost',
       fontSize: 14,
       fontWeight: FontWeight.w500,
@@ -109,4 +109,6 @@ class AppStyles {
       color: AppColors.black);
   static const TextStyle header7 =
       TextStyle(fontFamily: 'Jost', fontSize: 20, fontWeight: FontWeight.w700);
+  static const TextStyle header8 =
+      TextStyle(fontFamily: 'Jost', fontSize: 16, fontWeight: FontWeight.w700);
 }

@@ -24,7 +24,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
   final String _date = '12 октября';
   final String _time = '15:30';
   final String _paymentMethod = 'Банковской картой';
-  final int _goodsNumber = 3;
+  final int _productsNumber = 3;
   final int _price = 1850;
   final int? _sale = 10;
   final int _salePrice = 150;
@@ -137,7 +137,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
           ),
           SizedBox(height: 16.h),
           PriceRow(
-            title: '$_goodsNumber товара',
+            title: '$_productsNumber товара',
             titleColor: AppColors.grey142144150_1,
             value: '$_price ₽',
           ),
