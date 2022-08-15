@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:organic_market/ui/personal_data_page/personal_data_page.dart';
 import 'package:organic_market/ui/profile_page/widgets/profile_list_tile.dart';
 
 class ProfileList extends StatelessWidget {
@@ -18,7 +17,9 @@ class ProfileList extends StatelessWidget {
         ),
         ProfileListTile(
           title: 'Мои заказы',
-          onTap: () {},
+          onTap: () {
+            context.router.pushNamed('/myOrders');
+          },
         ),
         ProfileListTile(
           title: 'Мои адреса',

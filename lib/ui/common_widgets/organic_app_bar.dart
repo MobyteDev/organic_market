@@ -26,6 +26,7 @@ class OrganicAppBar extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
+        // Для создания тени
         Container(
           decoration: BoxDecoration(
             boxShadow: [
