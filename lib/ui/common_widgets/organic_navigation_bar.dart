@@ -21,71 +21,85 @@ class _OrganicNavigationBarState extends State<OrganicNavigationBar> {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      backgroundColor: AppColors.white,
-      selectedItemColor: AppColors.green149202_1,
-      unselectedItemColor: Color.fromARGB(255, 211, 206, 206),
-      selectedLabelStyle: AppStyles.header5,
-      unselectedLabelStyle: AppStyles.header5,
-      type: BottomNavigationBarType.fixed,
-      currentIndex: AutoTabsRouter.of(context).activeIndex,
-      onTap: _onItemTapped,
-      items: [
-        _buildBottomNavigationBarItem(
-          icon: AutoTabsRouter.of(context).activeIndex == 0
-              ? Image.asset('assets/icons/main_green.png')
-              : Image.asset('assets/icons/main.png'),
-          label: 'Главная',
-        ),
-        _buildBottomNavigationBarItem(
-          icon: Image.asset(
-            'assets/icons/catalog.png',
-            color: AutoTabsRouter.of(context).activeIndex == 1
-                ? AppColors.green149202_1
-                : null,
+    return Container(
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromRGBO(237, 234, 234, 1),
+            spreadRadius: 5.r,
+            blurRadius: 15.r,
           ),
-          label: 'Каталог',
-        ),
-        _buildBottomNavigationBarItem(
-          icon: Image.asset(
-            'assets/icons/search.png',
-            color: AutoTabsRouter.of(context).activeIndex == 2
-                ? AppColors.green149202_1
-                : null,
-          ),
-          label: 'Поиск',
-        ),
-        BottomNavigationBarItem(
-          icon: Stack(
-            children: [
-              Container(
-                padding: EdgeInsets.only(top: 10.h),
-                alignment: Alignment.center,
-                child: Image.asset(
-                  'assets/icons/cart.png',
-                  color: AutoTabsRouter.of(context).activeIndex == 3
-                      ? AppColors.green149202_1
-                      : null,
-                ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(10.r)),
+        child: BottomNavigationBar(
+          backgroundColor: AppColors.white,
+          selectedItemColor: AppColors.green149202_1,
+          unselectedItemColor: Color.fromARGB(255, 211, 206, 206),
+          selectedLabelStyle: AppStyles.header5,
+          unselectedLabelStyle: AppStyles.header5,
+          type: BottomNavigationBarType.fixed,
+          currentIndex: AutoTabsRouter.of(context).activeIndex,
+          onTap: _onItemTapped,
+          items: [
+            _buildBottomNavigationBarItem(
+              icon: AutoTabsRouter.of(context).activeIndex == 0
+                  ? Image.asset('assets/icons/main_green.png')
+                  : Image.asset('assets/icons/main.png'),
+              label: 'Главная',
+            ),
+            _buildBottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/icons/catalog.png',
+                color: AutoTabsRouter.of(context).activeIndex == 1
+                    ? AppColors.green149202_1
+                    : null,
               ),
-              Positioned(
-                child: Counter(counter: _counter),
-                left: 35.w,
-              )
-            ],
-          ),
-          label: 'Корзина',
+              label: 'Каталог',
+            ),
+            _buildBottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/icons/search.png',
+                color: AutoTabsRouter.of(context).activeIndex == 2
+                    ? AppColors.green149202_1
+                    : null,
+              ),
+              label: 'Поиск',
+            ),
+            BottomNavigationBarItem(
+              icon: Stack(
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(top: 10.h),
+                    alignment: Alignment.center,
+                    child: Image.asset(
+                      'assets/icons/cart.png',
+                      color: AutoTabsRouter.of(context).activeIndex == 3
+                          ? AppColors.green149202_1
+                          : null,
+                    ),
+                  ),
+                  Positioned(
+                    child: Counter(counter: _counter),
+                    left: 35.w,
+                  )
+                ],
+              ),
+              label: 'Корзина',
+            ),
+            _buildBottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/icons/profile.png',
+                color: AutoTabsRouter.of(context).activeIndex == 4
+                    ? AppColors.green149202_1
+                    : null,
+              ),
+              label: 'Профиль',
+            ),
+          ],
         ),
-        _buildBottomNavigationBarItem(
-          icon: Image.asset(
-            'assets/icons/profile.png',
-            color: AutoTabsRouter.of(context).activeIndex == 4
-                ? AppColors.green149202_1
-                : null,
-          ),
-          label: 'Профиль',
-        ),
-      ],
+      ),
     );
   }
 
