@@ -32,7 +32,7 @@ class ProfilePage extends StatelessWidget {
           BonusPoints(level: _level, points: _points),
           SizedBox(height: 20.h),
           ProfileList(),
-          Expanded(
+          Expanded( // Надо исправить ошибку
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
