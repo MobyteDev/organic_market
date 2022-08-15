@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
+import 'package:organic_market/ui/common_widgets/organic_bottom.dart';
 import 'package:organic_market/ui/common_widgets/organic_text_field.dart';
-import 'package:organic_market/ui/personal_data_page/widgets/personal_data_bottom_bar.dart';
 
 class PersonalDataPage extends StatelessWidget {
   final TextEditingController _nameController =
@@ -15,6 +15,8 @@ class PersonalDataPage extends StatelessWidget {
 
   PersonalDataPage({Key? key}) : super(key: key);
 
+  void _onTapSave() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +24,13 @@ class PersonalDataPage extends StatelessWidget {
         title: 'Личные данные',
         isBack: true,
       ),
-      bottomNavigationBar: PersonalDataBottomBar(buttonLabel: 'Сохранить'),
+      bottomNavigationBar: OrganicBottom(
+        height: 90.h,
+        buttonLabel: 'Сохранить',
+        buttonHeight: 58.h,
+        buttonWidth: 343.w,
+        onTap: _onTapSave,
+      ),
       body: ListView(
         padding: EdgeInsets.only(top: 32.h, left: 16.w, right: 16.w),
         children: [
