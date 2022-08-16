@@ -23,7 +23,9 @@ class ProfileList extends StatelessWidget {
         ),
         ProfileListTile(
           title: 'Мои адреса',
-          onTap: () {},
+          onTap: () {
+            context.router.pushNamed('/myAddresses');
+          },
         ),
         ProfileListTile(
           title: 'Способы оплаты',

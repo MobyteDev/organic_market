@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 
@@ -8,6 +9,7 @@ class OrganicTextField extends StatelessWidget {
   final TextEditingController controller;
   final bool isFloatingLabel;
   final void Function(String?)? onSubmitted;
+  final double? width;
 
   const OrganicTextField({
     Key? key,
@@ -16,11 +18,15 @@ class OrganicTextField extends StatelessWidget {
     this.suffixIcon,
     this.isFloatingLabel = true, // Будет ли лейбл подниматься вверх
     this.onSubmitted,
+    this.width,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        maxWidth: width == null ? double.infinity : width!,
+      ),
       child: TextField(
         style: AppStyles.header2,
         controller: controller,
@@ -29,7 +35,10 @@ class OrganicTextField extends StatelessWidget {
           labelText: labelText,
           border: isFloatingLabel
               ? InputBorder.none
-              : const OutlineInputBorder(borderSide: BorderSide.none),
+              : OutlineInputBorder(
+                  borderSide: BorderSide.none,
+                  borderRadius: BorderRadius.all(Radius.circular(4.r)),
+                ),
           floatingLabelBehavior: isFloatingLabel
               ? FloatingLabelBehavior.auto
               : FloatingLabelBehavior.never,
