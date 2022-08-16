@@ -7,6 +7,7 @@ import 'package:organic_market/ui/my_orders_page/my_orders_page.dart';
 import 'package:organic_market/ui/order_making_page/order_making_page.dart';
 import 'package:organic_market/ui/order_page/order_page.dart';
 import 'package:organic_market/ui/order_success_page.dart/order_success_page.dart';
+import 'package:organic_market/ui/payment_methods_page/payment_methods_page.dart';
 import 'package:organic_market/ui/personal_data_page/personal_data_page.dart';
 import 'package:organic_market/ui/product_page/product_page.dart';
 import 'package:organic_market/ui/profile_page/profile_page.dart';
@@ -42,6 +43,7 @@ import '../ui/main_screen/main_screen.dart';
     MaterialRoute(page: OrderPage, path: '/order'),
     MaterialRoute(page: MyAddressesPage, path: '/myAddresses'),
     MaterialRoute(page: AddressPage, path: '/address'),
+    MaterialRoute(page: PaymentMethodsPage, path: '/paymentMethods'),
   ],
   // replaceInRouteName: 'Route',
 )
