@@ -14,37 +14,40 @@ class AddressesListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          children: [
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    addressSettings.addressType,
-                    style: AppStyles.bodyGrey1,
-                  ),
-                  SizedBox(height: 10.h),
-                  Text(
-                    addressSettings.address,
-                    style: AppStyles.header3,
-                  ),
-                ],
+    return Container(
+      color: Colors.transparent,
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      addressSettings.addressType,
+                      style: AppStyles.bodyGrey1,
+                    ),
+                    SizedBox(height: 10.h),
+                    Text(
+                      addressSettings.address,
+                      style: AppStyles.header3,
+                    ),
+                  ],
+                ),
               ),
-            ),
-            addressSettings.isSelected
-                ? Image.asset('assets/icons/check.png')
-                : Container(),
-          ],
-        ),
-        Divider(
-          color: AppColors.grey242243240_1,
-          height: 16.h,
-          thickness: 1,
-        ),
-      ],
+              addressSettings.isSelected
+                  ? Image.asset('assets/icons/check.png')
+                  : Container(),
+            ],
+          ),
+          Divider(
+            color: AppColors.grey242243240_1,
+            height: 16.h,
+            thickness: 1,
+          ),
+        ],
+      ),
     );
   }
 }

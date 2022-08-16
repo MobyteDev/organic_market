@@ -10,7 +10,6 @@ import 'package:organic_market/ui/order_making_page/widgets/custom_switch.dart';
 import 'package:organic_market/ui/common_widgets/organic_text_field.dart';
 import 'package:organic_market/ui/order_making_page/widgets/order_making_list_tile.dart';
 import 'package:organic_market/ui/order_making_page/widgets/price_row.dart';
-import 'package:organic_market/ui/order_success_page.dart/order_success_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OrderMakingPage extends StatefulWidget {
