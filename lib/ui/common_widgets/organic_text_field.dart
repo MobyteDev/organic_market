@@ -7,6 +7,7 @@ class OrganicTextField extends StatelessWidget {
   final Widget? suffixIcon;
   final TextEditingController controller;
   final bool isFloatingLabel;
+  final void Function(String?)? onSubmitted;
 
   const OrganicTextField({
     Key? key,
@@ -14,14 +15,16 @@ class OrganicTextField extends StatelessWidget {
     required this.controller,
     this.suffixIcon,
     this.isFloatingLabel = true, // Будет ли лейбл подниматься вверх
+    this.onSubmitted,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: TextFormField(
+      child: TextField(
         style: AppStyles.header2,
         controller: controller,
+        onSubmitted: onSubmitted,
         decoration: InputDecoration(
           labelText: labelText,
           border: isFloatingLabel

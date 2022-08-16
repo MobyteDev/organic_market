@@ -3,17 +3,23 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/organic_bottom.dart';
 import 'package:organic_market/ui/common_widgets/organic_text_field.dart';
+import 'package:organic_market/utils/formatting.dart';
 
-class PersonalDataPage extends StatelessWidget {
+class PersonalDataPage extends StatefulWidget {
+  PersonalDataPage({Key? key}) : super(key: key);
+
+  @override
+  State<PersonalDataPage> createState() => _PersonalDataPageState();
+}
+
+class _PersonalDataPageState extends State<PersonalDataPage> {
   final TextEditingController _nameController =
       TextEditingController(text: 'Сергей');
   final TextEditingController _surnameController = TextEditingController();
   final TextEditingController _birthdayController = TextEditingController();
-  final TextEditingController _phoneController =
-      TextEditingController(text: '+7 123 456 78 90');
+  final TextEditingController _phoneController = TextEditingController(
+      text: Formatting.getFormattedNumber('+71234567890'));
   final TextEditingController _emailController = TextEditingController();
-
-  PersonalDataPage({Key? key}) : super(key: key);
 
   void _onTapSave() {}
 
@@ -53,6 +59,10 @@ class PersonalDataPage extends StatelessWidget {
           OrganicTextField(
             labelText: 'Телефон',
             controller: _phoneController,
+            onSubmitted: (string) {
+              _phoneController.text =
+                  Formatting.getFormattedNumber(_phoneController.text);
+            },
           ),
           SizedBox(height: 12.h),
           OrganicTextField(

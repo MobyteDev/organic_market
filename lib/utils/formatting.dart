@@ -1,3 +1,4 @@
+import 'package:flutter_libphonenumber/flutter_libphonenumber.dart';
 import 'package:intl/intl.dart';
 
 class Formatting {
@@ -16,5 +17,9 @@ class Formatting {
   static String getFormattedPrice(int price) {
     NumberFormat format = NumberFormat.decimalPattern('ru');
     return format.format(price);
+  }
+
+  static String getFormattedNumber(String number) {
+    return FlutterLibphonenumber().formatNumberSync(number);
   }
 }
