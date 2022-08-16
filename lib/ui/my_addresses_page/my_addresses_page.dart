@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:organic_market/data/address.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/organic_bottom.dart';
 import 'package:organic_market/ui/my_addresses_page/widgets/my_addresses_list.dart';
@@ -13,6 +14,19 @@ class MyAddressesPage extends StatefulWidget {
 }
 
 class _MyAddressesPageState extends State<MyAddressesPage> {
+  final List<Address> _addresses = [
+    Address(
+      type: 'Доставка',
+      name: 'Дом',
+      address: 'ул. Маршала Бирюзова, д. 19',
+    ),
+    Address(
+      type: 'Доставка',
+      name: 'Дом',
+      address: 'ул. Маршала Бирюзова, д. 19',
+    ),
+  ];
+
   void _onTapAdd() {
     context.router.pushNamed('/address');
   }
@@ -28,7 +42,7 @@ class _MyAddressesPageState extends State<MyAddressesPage> {
         height: 90.h,
         onTap: _onTapAdd,
       ),
-      body: MyAddressesList(),
+      body: MyAddressesList(addresses: _addresses),
     );
   }
 }

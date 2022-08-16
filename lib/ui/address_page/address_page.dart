@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:organic_market/data/address.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/organic_bottom.dart';
 import 'package:organic_market/ui/common_widgets/organic_text_field.dart';
 
-class AddressPage extends StatelessWidget {
+class AddressPage extends StatefulWidget {
+  AddressPage({Key? key}) : super(key: key);
+
+  @override
+  State<AddressPage> createState() => _AddressPageState();
+}
+
+class _AddressPageState extends State<AddressPage> {
+  final Address _address = Address(
+    address: 'ул. Маршала Бирюзова, д. 19',
+    name: 'Дом',
+    type: 'Доставка',
+  );
+
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _addressController = TextEditingController();
   final TextEditingController _flatController = TextEditingController();
@@ -12,9 +26,18 @@ class AddressPage extends StatelessWidget {
   final TextEditingController _floorController = TextEditingController();
   final TextEditingController _additionallyController = TextEditingController();
 
-  AddressPage({Key? key}) : super(key: key);
-
   void _onTapSave() {}
+
+  @override
+  void initState() {
+    _nameController.text = _address.name ?? '';
+    _addressController.text = _address.address;
+    _flatController.text = _address.flat ?? '';
+    _entranceController.text = _address.entrance ?? '';
+    _floorController.text = _address.floor ?? '';
+    _additionallyController.text = _address.additionally ?? '';
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +55,7 @@ class AddressPage extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.only(top: 32.h, left: 16.w, right: 16.w),
         children: [
-          OrganicTextField(
-              labelText: 'Название', controller: _nameController),
+          OrganicTextField(labelText: 'Название', controller: _nameController),
           SizedBox(height: 12.h),
           OrganicTextField(
               labelText: 'Город, улица, дом', controller: _addressController),
@@ -42,7 +64,7 @@ class AddressPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               OrganicTextField(
-                labelText: 'Дом',
+                labelText: 'Квартира',
                 controller: _flatController,
                 width: littleTextFieldWidth,
               ),
