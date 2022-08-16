@@ -79,7 +79,7 @@ class AutoRouter extends _i11.RootStackRouter {
     },
     ProfilePageRoute.name: (routeData) {
       return _i11.MaterialPageX<dynamic>(
-          routeData: routeData, child: const _i10.ProfilePage());
+          routeData: routeData, child: _i10.ProfilePage());
     }
   };
 
