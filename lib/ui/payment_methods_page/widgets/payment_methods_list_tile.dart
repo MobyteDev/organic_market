@@ -14,7 +14,7 @@ class PaymentMethodsListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.router.pushNamed('/address');
+        context.router.pushNamed('/paymentMethod');
       },
       child: Container(
         color: Colors.transparent,
@@ -24,7 +24,7 @@ class PaymentMethodsListTile extends StatelessWidget {
             SizedBox(width: 10.w),
             Expanded(
               child: Text(
-                '···· ${paymentMethod.number.substring(15, 19)}', // Пока что так
+                '···· ${paymentMethod.number.substring(12, 16)}',
                 style: AppStyles.header3,
               ),
             ),

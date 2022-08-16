@@ -22,4 +22,11 @@ class Formatting {
   static String getFormattedNumber(String number) {
     return FlutterLibphonenumber().formatNumberSync(number);
   }
+
+  static String getFormattedCardNumber(String number) {
+    number = number.replaceRange(4, 4, ' ');
+    number = number.replaceRange(9, 9, ' ');
+    number = number.replaceRange(14, 14, ' ');
+    return number;
+  }
 }
