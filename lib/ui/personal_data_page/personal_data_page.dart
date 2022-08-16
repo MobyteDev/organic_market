@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
+import 'package:organic_market/ui/common_widgets/organic_bottom.dart';
 import 'package:organic_market/ui/common_widgets/organic_text_field.dart';
 
 class PersonalDataPage extends StatelessWidget {
@@ -13,6 +15,8 @@ class PersonalDataPage extends StatelessWidget {
 
   PersonalDataPage({Key? key}) : super(key: key);
 
+  void _onTapSave() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,30 +24,37 @@ class PersonalDataPage extends StatelessWidget {
         title: 'Личные данные',
         isBack: true,
       ),
+      bottomNavigationBar: OrganicBottom(
+        height: 90.h,
+        buttonLabel: 'Сохранить',
+        buttonHeight: 58.h,
+        buttonWidth: 343.w,
+        onTap: _onTapSave,
+      ),
       body: ListView(
-        padding: const EdgeInsets.only(top: 32, left: 16, right: 16),
+        padding: EdgeInsets.only(top: 32.h, left: 16.w, right: 16.w),
         children: [
           OrganicTextField(
             labelText: 'Имя',
             controller: _nameController,
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12.h),
           OrganicTextField(
             labelText: 'Фамилия',
             controller: _surnameController,
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12.h),
           OrganicTextField(
             labelText: 'Дата рождения',
             suffixIcon: Image.asset('assets/icons/calendar.png'),
             controller: _birthdayController,
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12.h),
           OrganicTextField(
             labelText: 'Телефон',
             controller: _phoneController,
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: 12.h),
           OrganicTextField(
             labelText: 'E-mail',
             controller: _emailController,

@@ -4,13 +4,12 @@ import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/data/address_settings.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
+import 'package:organic_market/ui/common_widgets/organic_bottom.dart';
 import 'package:organic_market/ui/order_making_page/widgets/addresses_list.dart';
-import 'package:organic_market/ui/order_making_page/widgets/order_making_bottom_bar.dart';
 import 'package:organic_market/ui/order_making_page/widgets/custom_switch.dart';
 import 'package:organic_market/ui/common_widgets/organic_text_field.dart';
 import 'package:organic_market/ui/order_making_page/widgets/order_making_list_tile.dart';
 import 'package:organic_market/ui/order_making_page/widgets/price_row.dart';
-import 'package:organic_market/ui/order_success_page.dart/order_success_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OrderMakingPage extends StatefulWidget {
@@ -25,7 +24,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
   final String _date = '12 октября';
   final String _time = '15:30';
   final String _paymentMethod = 'Банковской картой';
-  final int _goodsNumber = 3;
+  final int _productsNumber = 3;
   final int _price = 1850;
   final int? _sale = 10;
   final int _salePrice = 150;
@@ -73,9 +72,12 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
         title: 'Оформление заказа',
         isBack: true,
       ),
-      bottomNavigationBar: OrderMakingBottomBar(
+      bottomNavigationBar: OrganicBottom(
+        height: 134,
         buttonLabel: 'Оформить заказ',
-        onTapButton: _onTapMakeOrder,
+        buttonHeight: 58.h,
+        buttonWidth: 343.w,
+        onTap: _onTapMakeOrder,
         label: 'Нажимая "Оформить заказ", вы принимаете условия',
         textButtonLabel: 'Публичной оферты',
       ),
@@ -135,7 +137,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
           ),
           SizedBox(height: 16.h),
           PriceRow(
-            title: '$_goodsNumber товара',
+            title: '$_productsNumber товара',
             titleColor: AppColors.grey142144150_1,
             value: '$_price ₽',
           ),

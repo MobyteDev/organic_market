@@ -6,7 +6,7 @@ import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 
 class OrderSuccessPage extends StatelessWidget {
   final int _orderNumber = 934679;
-  final _goodsNumber = 3;
+  final _productsNumber = 3;
   final int _price = 1850;
 
   const OrderSuccessPage({Key? key}) : super(key: key);
@@ -30,7 +30,7 @@ class OrderSuccessPage extends StatelessWidget {
             ),
             SizedBox(height: 2.h),
             Text(
-              '$_goodsNumber товара на сумму $_price ₽',
+              '$_productsNumber товара на сумму $_price ₽',
               style: AppStyles.bodyGrey1,
             ),
             SizedBox(height: 9.h),
