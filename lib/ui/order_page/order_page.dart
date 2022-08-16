@@ -6,6 +6,7 @@ import 'package:organic_market/data/order.dart';
 import 'package:organic_market/data/product.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/order_page/widgets/products_list.dart';
+import 'package:organic_market/utils/formatting.dart';
 
 class OrderPage extends StatelessWidget {
   final Order _order = Order(
@@ -18,7 +19,7 @@ class OrderPage extends StatelessWidget {
       Product(
         'Масло сливочное Традиционное',
         1,
-        500,
+        1500,
         'assets/images/product.png',
         count: 1,
       ),
@@ -51,7 +52,8 @@ class OrderPage extends StatelessWidget {
           SizedBox(height: 4.h),
           Center(
             child: Text(
-              '${_order.productsNumber} товара на сумму ${_order.price} ₽',
+              '${_order.productsNumber} ${Formatting.getProductDeclination(_order.productsNumber)} '
+              'на сумму ${Formatting.getFormattedPrice(_order.price)} ₽',
               style: AppStyles.header8,
             ),
           ),
@@ -111,7 +113,7 @@ class OrderPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          '${_order.deliveryPrice} ₽',
+                          '${Formatting.getFormattedPrice(_order.deliveryPrice)} ₽',
                           style: AppStyles.header6,
                         ),
                       ],

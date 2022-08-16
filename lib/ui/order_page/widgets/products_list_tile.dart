@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/data/product.dart';
+import 'package:organic_market/utils/formatting.dart';
 
 class ProductsListTile extends StatelessWidget {
   final Product product;
@@ -40,7 +41,7 @@ class ProductsListTile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '${product.price} ₽',
+                        '${Formatting.getFormattedPrice(product.price)} ₽',
                         style: AppStyles.header6,
                       ),
                       Text(
