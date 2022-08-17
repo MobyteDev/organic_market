@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:organic_market/data/order.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
-import 'package:organic_market/ui/my_orders_page/widgets/orders_list.dart';
+import 'package:organic_market/ui/my_orders_page/widgets/my_orders_list.dart';
 
 class MyOrdersPage extends StatelessWidget {
   final List<Order> orders = [
@@ -28,7 +28,7 @@ class MyOrdersPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: OrganicAppBar(title: 'Мои заказы', isBack: true),
-      body: OrdersList(orders: orders),
+      body: MyOrdersList(orders: orders),
     );
   }
 }
