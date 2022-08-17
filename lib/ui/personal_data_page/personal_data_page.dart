@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/organic_bottom.dart';
 import 'package:organic_market/ui/common_widgets/organic_text_field.dart';
+import 'package:organic_market/utils/formatters/birthday_fomatted.dart';
+import 'package:organic_market/utils/formatters/phone_number_formatter.dart';
 import 'package:organic_market/utils/formatting.dart';
 
 class PersonalDataPage extends StatefulWidget {
@@ -17,8 +19,8 @@ class _PersonalDataPageState extends State<PersonalDataPage> {
       TextEditingController(text: 'Сергей');
   final TextEditingController _surnameController = TextEditingController();
   final TextEditingController _birthdayController = TextEditingController();
-  final TextEditingController _phoneController = TextEditingController(
-      text: Formatting.getFormattedNumber('+71234567890'));
+  final TextEditingController _phoneController =
+      TextEditingController(text: Formatting.getFormattedNumber('71234567890'));
   final TextEditingController _emailController = TextEditingController();
 
   void _onTapSave() {}
@@ -54,20 +56,25 @@ class _PersonalDataPageState extends State<PersonalDataPage> {
             labelText: 'Дата рождения',
             suffixIcon: Image.asset('assets/icons/calendar.png'),
             controller: _birthdayController,
+            keyboardType: TextInputType.datetime,
+            inputFormatters: [
+              BirthdayFormatter(),
+            ],
           ),
           SizedBox(height: 12.h),
           OrganicTextField(
             labelText: 'Телефон',
             controller: _phoneController,
-            onSubmitted: (string) {
-              _phoneController.text =
-                  Formatting.getFormattedNumber(_phoneController.text);
-            },
+            keyboardType: TextInputType.phone,
+            inputFormatters: [
+              PhoneNumberFormatter(),
+            ],
           ),
           SizedBox(height: 12.h),
           OrganicTextField(
             labelText: 'E-mail',
             controller: _emailController,
+            keyboardType: TextInputType.emailAddress,
           ),
         ],
       ),

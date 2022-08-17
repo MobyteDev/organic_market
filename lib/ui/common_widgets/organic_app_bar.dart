@@ -1,8 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:organic_market/common/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OrganicAppBar extends StatelessWidget with PreferredSizeWidget {

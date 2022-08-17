@@ -1,6 +1,3 @@
-import 'package:flutter_libphonenumber/flutter_libphonenumber.dart';
-import 'package:intl/intl.dart';
-
 class Formatting {
   static String getProductDeclination(int number) {
     if (number % 100 >= 11 && number % 100 <= 14) {
@@ -15,18 +12,31 @@ class Formatting {
   }
 
   static String getFormattedPrice(int price) {
-    NumberFormat format = NumberFormat.decimalPattern('ru');
-    return format.format(price);
+    String priceString = price.toString();
+    int j = 1;
+    // Идем с конца, добавляем  пробел через каждые 3 цифры
+    for (int i = priceString.length - 1; i >= 0; i--) {
+      if (j % 3 == 0) {
+        priceString = priceString.replaceRange(i, i, ' ');
+      }
+      j++;
+    }
+    return priceString;
   }
 
   static String getFormattedNumber(String number) {
-    return FlutterLibphonenumber().formatNumberSync(number);
+    return number
+        .replaceRange(0, 0, '+')
+        .replaceRange(2, 2, ' ')
+        .replaceRange(6, 6, ' ')
+        .replaceRange(10, 10, ' ')
+        .replaceRange(13, 13, ' ');
   }
 
   static String getFormattedCardNumber(String number) {
-    number = number.replaceRange(4, 4, ' ');
-    number = number.replaceRange(9, 9, ' ');
-    number = number.replaceRange(14, 14, ' ');
-    return number;
+    return number
+        .replaceRange(4, 4, ' ')
+        .replaceRange(9, 9, ' ')
+        .replaceRange(14, 14, ' ');
   }
 }

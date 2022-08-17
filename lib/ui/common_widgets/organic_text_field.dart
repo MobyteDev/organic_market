@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
@@ -10,6 +11,8 @@ class OrganicTextField extends StatelessWidget {
   final bool isFloatingLabel;
   final void Function(String?)? onSubmitted;
   final double? width;
+  final TextInputType? keyboardType;
+  final List<TextInputFormatter>? inputFormatters;
 
   const OrganicTextField({
     Key? key,
@@ -19,6 +22,8 @@ class OrganicTextField extends StatelessWidget {
     this.isFloatingLabel = true, // Будет ли лейбл подниматься вверх
     this.onSubmitted,
     this.width,
+    this.keyboardType,
+    this.inputFormatters,
   }) : super(key: key);
 
   @override
@@ -30,7 +35,9 @@ class OrganicTextField extends StatelessWidget {
       child: TextField(
         style: AppStyles.header2,
         controller: controller,
+        keyboardType: keyboardType,
         onSubmitted: onSubmitted,
+        inputFormatters: inputFormatters,
         decoration: InputDecoration(
           labelText: labelText,
           border: isFloatingLabel

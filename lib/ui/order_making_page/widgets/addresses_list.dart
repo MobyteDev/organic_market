@@ -2,25 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
-import 'package:organic_market/data/address_settings.dart';
+import 'package:organic_market/data/address.dart';
 import 'package:organic_market/ui/order_making_page/widgets/addresses_list_tile.dart';
 
 class AddressesList extends StatefulWidget {
-  final List<AddressSettings> addressSetingsList;
+  final List<Address> addresses;
 
-  const AddressesList({Key? key, required this.addressSetingsList})
-      : super(key: key);
+  const AddressesList({Key? key, required this.addresses}) : super(key: key);
 
   @override
   State<AddressesList> createState() => _AddressesListState();
 }
 
 class _AddressesListState extends State<AddressesList> {
-  late final List<AddressSettings> _addressSetingsList;
+  late final List<Address> _addresses;
 
   @override
   void initState() {
-    _addressSetingsList = widget.addressSetingsList;
+    _addresses = widget.addresses;
     super.initState();
   }
 
@@ -77,20 +76,22 @@ class _AddressesListState extends State<AddressesList> {
 
   List<Widget> _buildList() {
     List<Widget> addressesList = [];
-    for (AddressSettings addressSetings in _addressSetingsList) {
+    for (Address address in _addresses) {
       addressesList.add(
         GestureDetector(
           onTap: () {
-            setState(() {
-              addressSetings.isSelected = !addressSetings.isSelected;
-              for (AddressSettings addressSetings2 in _addressSetingsList) {
-                if (addressSetings2 != addressSetings) {
-                  addressSetings2.isSelected = false;
+            setState(
+              () {
+                address.isSelected = !address.isSelected;
+                for (Address address2 in _addresses) {
+                  if (address2 != address) {
+                    address2.isSelected = false;
+                  }
                 }
-              }
-            });
+              },
+            );
           },
-          child: AddressesListTile(addressSettings: addressSetings),
+          child: AddressesListTile(address: address),
         ),
       );
     }

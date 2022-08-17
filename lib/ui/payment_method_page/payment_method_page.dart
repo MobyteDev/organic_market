@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/data/payment_method.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/organic_bottom.dart';
 import 'package:organic_market/ui/common_widgets/organic_text_field.dart';
+import 'package:organic_market/utils/formatters/card_date_formatter.dart';
+import 'package:organic_market/utils/formatters/card_name_formatter.dart';
+import 'package:organic_market/utils/formatters/card_number_formatter.dart';
 import 'package:organic_market/utils/formatting.dart';
 
 class PaymentMethodPage extends StatefulWidget {
@@ -26,7 +30,9 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
   final TextEditingController _dateController = TextEditingController();
   final TextEditingController _cvvController = TextEditingController();
 
-  void _onTapSave() {}
+  void _onTapSave() {
+    print(_numberController.text);
+  }
 
   @override
   void initState() {
@@ -57,10 +63,21 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
           Column(
             children: [
               OrganicTextField(
-                  labelText: 'Имя на карте', controller: _nameController),
+                labelText: 'Имя на карте',
+                controller: _nameController,
+                inputFormatters: [
+                  CardNameFormatter(),
+                ],
+              ),
               SizedBox(height: 12.h),
               OrganicTextField(
-                  labelText: 'Номер', controller: _numberController),
+                labelText: 'Номер карты',
+                controller: _numberController,
+                keyboardType: TextInputType.number,
+                inputFormatters: [
+                  CardNumberFormatter(),
+                ],
+              ),
               SizedBox(height: 12.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -68,11 +85,22 @@ class _PaymentMethodPageState extends State<PaymentMethodPage> {
                   OrganicTextField(
                     labelText: 'Срок дествия',
                     controller: _dateController,
+                    keyboardType: TextInputType.datetime,
+                    inputFormatters: [
+                      CardDateFormatter(),
+                    ],
                     width: _littleTextFieldWidth,
                   ),
                   OrganicTextField(
                     labelText: 'CVV',
                     controller: _cvvController,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [
+                      // Только цифры
+                      FilteringTextInputFormatter.digitsOnly,
+                      // Длина не больше 3
+                      LengthLimitingTextInputFormatter(3),
+                    ],
                     width: _littleTextFieldWidth,
                   ),
                 ],

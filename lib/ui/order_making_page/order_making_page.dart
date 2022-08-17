@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
-import 'package:organic_market/data/address_settings.dart';
+import 'package:organic_market/data/address.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/organic_bottom.dart';
 import 'package:organic_market/ui/order_making_page/widgets/addresses_list.dart';
@@ -35,14 +35,14 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
 
   final TextEditingController _controller = TextEditingController();
 
-  final List<AddressSettings> _addressSettingsList = [
-    AddressSettings(
-      addressType: 'Доставка',
+  final List<Address> _addresses = [
+    Address(
+      type: 'Доставка',
       address: 'ул. Маршала Бирюзова, д. 19, кв. 189',
       isSelected: true,
     ),
-    AddressSettings(
-      addressType: 'Самовывоз',
+    Address(
+      type: 'Самовывоз',
       address: 'Бутырская улица, 84',
     ),
   ];
@@ -52,7 +52,7 @@ class _OrderMakingPageState extends State<OrderMakingPage> {
       context: context,
       backgroundColor: AppColors.transparent,
       builder: (context) {
-        return AddressesList(addressSetingsList: _addressSettingsList);
+        return AddressesList(addresses: _addresses);
       },
     );
   }

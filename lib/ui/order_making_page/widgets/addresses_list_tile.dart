@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
-import 'package:organic_market/data/address_settings.dart';
+import 'package:organic_market/data/address.dart';
 
 class AddressesListTile extends StatelessWidget {
-  final AddressSettings addressSettings;
+  final Address address;
 
   const AddressesListTile({
     Key? key,
-    required this.addressSettings,
+    required this.address,
   }) : super(key: key);
 
   @override
@@ -23,18 +23,18 @@ class AddressesListTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    addressSettings.addressType,
+                    address.type,
                     style: AppStyles.bodyGrey1,
                   ),
                   SizedBox(height: 10.h),
                   Text(
-                    addressSettings.address,
+                    address.address,
                     style: AppStyles.header3,
                   ),
                 ],
               ),
             ),
-            addressSettings.isSelected
+            address.isSelected
                 ? Image.asset('assets/icons/check.png')
                 : Container(),
           ],

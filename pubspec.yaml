@@ -47,9 +47,6 @@ dependencies:
   injectable: ^1.5.3
   injectable_generator: ^1.5.4
   shared_preferences: ^2.0.15
-  intl: ^0.17.0
-  flutter_libphonenumber: ^1.2.4
-
 
 
 dev_dependencies:

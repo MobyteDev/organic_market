@@ -8,7 +8,7 @@ import 'package:organic_market/utils/formatting.dart';
 
 class ProfilePage extends StatelessWidget {
   final String _name = 'Сергей';
-  final String _phone = Formatting.getFormattedNumber('+71234567890');
+  final String _phone = Formatting.getFormattedNumber('71234567890');
   final int _points = 250;
   final int _level = 2;
 
