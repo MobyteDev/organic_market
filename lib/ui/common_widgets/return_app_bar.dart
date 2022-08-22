@@ -34,7 +34,7 @@ class ReturnAppBar extends StatelessWidget with PreferredSizeWidget {
         child: Image.asset(
           "assets/icons/back.png",
         ),
-        onTap: () {},
+        onTap: () {Navigator.of(context).pop();},
       ),
     );
   }

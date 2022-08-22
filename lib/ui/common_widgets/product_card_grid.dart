@@ -43,6 +43,7 @@ class ProductCardGrid extends StatelessWidget {
                 mainAxisSpacing: 8.w,
             childAspectRatio: 167.5.w/240.h),
             shrinkWrap: true,
+            clipBehavior: Clip.none,
           ),
         ],
       ),

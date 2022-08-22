@@ -41,6 +41,7 @@ class ProductCard extends StatelessWidget {
               height: 0.15.sh,
               fit: BoxFit.contain,
             ),
+            Spacer(),
             Text(
               product.name,
               style: AppStyles.body2,

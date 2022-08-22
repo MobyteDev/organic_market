@@ -54,19 +54,19 @@ class MainPage extends StatelessWidget {
               SizedBox(height: 10),
               CategoryList(categories: [
                 ProductCategory(
-                    "Молочные продукты, яйцо", "assets/images/category.png"),
+                    "Молочные продукты, яйцо", "assets/images/categories/milk.png"),
                 ProductCategory(
-                    "Молочные продукты, яйцо", "assets/images/category.png"),
+                    "Молочные продукты, яйцо", "assets/images/categories/milk.png"),
                 ProductCategory(
-                    "Молочные продукты, яйцо", "assets/images/category.png"),
+                    "Молочные продукты, яйцо", "assets/images/categories/milk.png"),
                 ProductCategory(
-                    "Молочные продукты, яйцо", "assets/images/category.png"),
+                    "Молочные продукты, яйцо", "assets/images/categories/milk.png"),
                 ProductCategory(
-                    "Молочные продукты, яйцо", "assets/images/category.png"),
+                    "Молочные продукты, яйцо", "assets/images/categories/milk.png"),
                 ProductCategory(
-                    "Молочные продукты, яйцо", "assets/images/category.png"),
+                    "Молочные продукты, яйцо", "assets/images/categories/milk.png"),
                 ProductCategory(
-                    "Молочные продукты, яйцо", "assets/images/category.png")
+                    "Молочные продукты, яйцо", "assets/images/categories/milk.png")
               ]),
               ProductCardList(
                 isTitled: true,

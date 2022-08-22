@@ -38,33 +38,33 @@ class CategoriesPage extends StatelessWidget {
               CategoryGrid(
                 categories: [
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Молочные продукты, яйцо", "assets/images/categories/milk.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Мясо, птица", "assets/images/categories/meat_c.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Овощи, фрукты, зелень", "assets/images/categories/greens.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Хлеб, выпечка", "assets/images/categories/bakery.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Кондитерские изделия", "assets/images/categories/sweets.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Детям", "assets/images/categories/children.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Товары для дома", "assets/images/categories/house.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Бакалея", "assets/images/categories/groceries.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Напитки, соки, чай, кофе", "assets/images/categories/drinks.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Замороженные продукты", "assets/images/categories/frozen.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Рыба, икра, краб", "assets/images/categories/fish.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Рыба, икра, краб", "assets/images/categories/alcohol.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Биологически активные добавки", "assets/images/categories/bio.png"),
                   ProductCategory(
-                      "Молочные продукты, яйцо", "assets/images/category.png"),
+                      "Суперфуды", "assets/images/categories/superfood.png"),
                 ],
               ),
               SizedBox(

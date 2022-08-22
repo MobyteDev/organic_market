@@ -19,12 +19,16 @@ class Brands extends StatelessWidget {
           ),
         ),
         GridView.count(
+          physics: NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           crossAxisCount: 3,
-          children: List.generate(6, (i) => Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Image.asset("assets/images/brand${i+1}.png"),
-          )),
+          children: List.generate(
+            6,
+            (i) => Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Image.asset("assets/images/brand${i + 1}.png"),
+            ),
+          ),
         )
       ],
     );

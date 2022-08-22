@@ -19,7 +19,7 @@ class OrderSuccessPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               'Заказ успешно оформлен',
               style: AppStyles.header4,
             ),

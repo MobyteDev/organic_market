@@ -24,12 +24,12 @@ class CategoryList extends StatelessWidget {
               )),
           SizedBox(height: 0.02.sh),
           SizedBox(
-            height: 0.25.sw,
+            height: 104.w,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, i) => CategoryCard(
                 category: categories[i],
-                width: 0.25.sw,
+                width: 104.w,
                 onTap: () {
                   // context.r
                 },

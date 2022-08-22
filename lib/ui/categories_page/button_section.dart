@@ -33,7 +33,7 @@ class ButtonSection extends StatelessWidget {
                       SizedBox(width: 5.w),
                       Text(
                         "Скидки",
-                        style: AppStyles.bigBody,
+                        style: AppStyles.body3,
                       ),
                       Spacer(),
                     ],
@@ -56,7 +56,7 @@ class ButtonSection extends StatelessWidget {
                       SizedBox(width: 5.w),
                       Text(
                         "Избранное",
-                        style: AppStyles.bigBody,
+                        style: AppStyles.body3,
                       ),
                       Spacer(),
                     ],
@@ -84,7 +84,7 @@ class ButtonSection extends StatelessWidget {
                   SizedBox(width: 5.w),
                   Text(
                     "Уже покупали",
-                    style: AppStyles.bigBody,
+                    style: AppStyles.body3,
                   ),
                   Spacer(),
                 ],
