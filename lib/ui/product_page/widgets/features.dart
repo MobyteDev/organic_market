@@ -62,7 +62,7 @@ class Features extends StatelessWidget {
                     SizedBox(
                       width: 4.w,
                     ),
-                    const Text(
+                    Text(
                       "Органик",
                       style: AppStyles.body5,
                     ),
@@ -94,7 +94,7 @@ class Features extends StatelessWidget {
                     SizedBox(
                       width: 3.w,
                     ),
-                    const Text(
+                    Text(
                       "Экспресс доставка",
                       style: AppStyles.body6,
                     ),

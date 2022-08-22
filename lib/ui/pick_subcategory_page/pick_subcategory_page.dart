@@ -6,6 +6,7 @@ import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/data/subcategory.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
 import 'package:organic_market/ui/common_widgets/return_app_bar.dart';
+import 'package:organic_market/utils/app_router.gr.dart';
 
 class PickSubcategoryPage extends StatelessWidget {
   const PickSubcategoryPage({Key? key, required this.subcategories})
@@ -31,7 +32,7 @@ class PickSubcategoryPage extends StatelessWidget {
                 ],
               ),
             ),
-            onTap: () {},
+            onTap: () {context.pushRoute(SubcategoryPageRoute());},
           ),
           separatorBuilder: (context, i) => Divider(
             color: AppColors.grey242243240_1,

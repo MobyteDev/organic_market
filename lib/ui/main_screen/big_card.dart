@@ -52,7 +52,7 @@ class BigCard extends StatelessWidget {
                     ),
                     Spacer(),
                     SizedBox(
-                        width: 0.5.sw,
+                        width: 175.w,
                         child: Text(
                           offer.description,
                           style: AppStyles.body1.copyWith(height: 1),

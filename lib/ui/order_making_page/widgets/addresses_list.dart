@@ -41,7 +41,7 @@ class _AddressesListState extends State<AddressesList> {
         children: [
           Center(child: _buildHandle()),
           SizedBox(height: 24.h),
-          const Text(
+          Text(
             'Ваши адреса',
             style: AppStyles.header7,
           ),

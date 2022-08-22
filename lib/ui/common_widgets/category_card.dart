@@ -19,39 +19,44 @@ class CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: small ? const EdgeInsets.all(3.0) : const EdgeInsets.all(6.0),
-      width: width,
-      decoration: BoxDecoration(
-        color: AppColors.white,
-        borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.grey242243240_1,
-            spreadRadius: 5,
-            blurRadius: 10,
-            offset: Offset(0, 5),
-            //blurStyle: BlurStyle.outer,
-          ),
-        ],
-      ),
-      child: Stack(
-        children: [
-          Align(
-            alignment: Alignment.topLeft,
-            child: SizedBox(height: 80.h, child: Image.asset(category.image)),
-          ),
-          Align(
-            alignment: Alignment.bottomLeft,
-            child: SizedBox(
-              width: 100.w,
-              child: Text(
-                category.title,
-                style: small ? AppStyles.body2.copyWith(height: 1) : AppStyles.body1.copyWith(height: 1),
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        padding: small ? EdgeInsets.all(10.0.w) : EdgeInsets.only(left: 10.0.w, right: 10.0.w, bottom: 14.0.w),
+        width: width,
+        decoration: BoxDecoration(
+          color: AppColors.white,
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.grey242243240_1,
+              spreadRadius: 5,
+              blurRadius: 10,
+              offset: Offset(0, 5),
+              //blurStyle: BlurStyle.outer,
+            ),
+          ],
+        ),
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.topLeft,
+              child: Image.asset(category.image, fit: BoxFit.fitWidth, height: 120.h),
+            ),
+            Align(
+              alignment: Alignment.bottomLeft,
+              child: SizedBox(
+                width: 100.w,
+                child: Text(
+                  category.title,
+                  style: small
+                      ? AppStyles.body2.copyWith(height: 1)
+                      : AppStyles.body1.copyWith(height: 1),
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
