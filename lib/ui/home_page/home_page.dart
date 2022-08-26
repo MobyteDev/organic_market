@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
           MainPageRoute(),
           CategoriesPageRoute(),
           CategoriesPageRoute(),
-          CategoriesPageRoute(),
+          CartPageRoute(),
           ProfilePageRoute(),
         ],
         builder: (context, child, tabController) {

@@ -86,20 +86,20 @@ class AppStyles {
       color: AppColors.green149202_1);
 
   static final TextStyle header1 =
-      TextStyle(fontFamily: 'Jost', fontSize: 18, fontWeight: FontWeight.w600);
+      TextStyle(fontFamily: 'Jost', fontSize: 18.sp, fontWeight: FontWeight.w600);
   static final TextStyle header2 =
-      TextStyle(fontFamily: 'Jost', fontSize: 16, fontWeight: FontWeight.w500);
+      TextStyle(fontFamily: 'Jost', fontSize: 16.sp, fontWeight: FontWeight.w500);
   static final TextStyle header3 =
-      TextStyle(fontFamily: 'Jost', fontSize: 14, fontWeight: FontWeight.w500);
+      TextStyle(fontFamily: 'Jost', fontSize: 14.sp, fontWeight: FontWeight.w500);
   static final TextStyle header4 =
-      TextStyle(fontFamily: 'Jost', fontSize: 24, fontWeight: FontWeight.w600);
+      TextStyle(fontFamily: 'Jost', fontSize: 24.sp, fontWeight: FontWeight.w600);
   static final TextStyle header5 =
-      TextStyle(fontFamily: 'Jost', fontSize: 14, fontWeight: FontWeight.w600);
+      TextStyle(fontFamily: 'Jost', fontSize: 14.sp, fontWeight: FontWeight.w600);
   static final TextStyle header6 = TextStyle(
       fontFamily: 'Jost',
-      fontSize: 16,
+      fontSize: 16.sp,
       fontWeight: FontWeight.w600,
       color: AppColors.black);
   static final TextStyle header7 =
-      TextStyle(fontFamily: 'Jost', fontSize: 20, fontWeight: FontWeight.w700);
+      TextStyle(fontFamily: 'Jost', fontSize: 20.sp, fontWeight: FontWeight.w700);
 }

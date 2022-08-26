@@ -111,8 +111,6 @@ class ProductPage extends StatelessWidget {
                       height: 16.h,
                     ),
                     ProductCardList(
-                      isTitled: false,
-                      title: "title",
                       products: [
                         Product(
                           "Масло сливочное Традиционное",

@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:organic_market/ui/cart_page/cart_page.dart';
 import 'package:organic_market/ui/home_page/home_page.dart';
 import 'package:organic_market/ui/categories_page/categories_page.dart';
 import 'package:organic_market/ui/order_making_page/order_making_page.dart';
@@ -25,6 +26,10 @@ import '../ui/main_screen/main_screen.dart';
         MaterialRoute(
           page: CategoriesPage,
           path: 'categories',
+        ),
+        MaterialRoute(
+            page: CartPage,
+            path: 'cart',
         ),
         MaterialRoute(
           page: ProfilePage,

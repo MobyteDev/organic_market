@@ -9,11 +9,11 @@ class ProductCardList extends StatelessWidget {
     Key? key,
     this.title,
     required this.products,
-    required this.isTitled,
+    this.smallTitle = false,
   }) : super(key: key);
 
+  final bool smallTitle;
   final String? title;
-  final bool isTitled;
   final List<Product> products;
 
   @override
@@ -22,11 +22,11 @@ class ProductCardList extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
-          isTitled ? Align(
+          title != null ? Align(
             alignment: Alignment.centerLeft,
             child: Text(
               title!,
-              style: AppStyles.bigHeader,
+              style: smallTitle ? AppStyles.bigHeader2 : AppStyles.bigHeader,
             ),
           ) : Container(),
           SizedBox(height: 0.02.sh),

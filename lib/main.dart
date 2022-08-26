@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/di/locator.dart';
+import 'package:organic_market/ui/cart_page/cart_page.dart';
 import 'package:organic_market/utils/app_router.gr.dart';
-
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, __) {
-        return MaterialApp.router(
+        return  MaterialApp.router(
           title: 'Flutter Demo',
           theme: ThemeData(
             appBarTheme: AppBarTheme(
