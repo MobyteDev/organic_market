@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:organic_market/bloc/profile_page_cubit.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/ui/common_widgets/organic_app_bar.dart';
+import 'package:organic_market/ui/personal_data_page/personal_data_page.dart';
 import 'package:organic_market/ui/profile_page/widgets/bonus_points.dart';
 import 'package:organic_market/ui/profile_page/widgets/profile_list.dart';
 
@@ -15,38 +18,49 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: OrganicAppBar(title: 'Профиль'),
-      body: ListView(
-        padding: EdgeInsets.only(
-          top: 32.h,
-          left: 16.w,
-          right: 16.w,
-          bottom: 21.h,
-        ),
-        children: [
-          Text(_name, style: AppStyles.header4),
-          SizedBox(height: 3.h),
-          Text(_phone, style: AppStyles.bodyGrey4),
-          SizedBox(height: 20.h),
-          BonusPoints(level: _level, points: _points),
-          SizedBox(height: 20.h),
-          ProfileList(),
-          Expanded( // Надо исправить ошибку
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                SizedBox(
-                  // Для выравнения строки
-                  height: 26.h,
-                  child: Image.asset('assets/icons/exit.png'),
+    return BlocProvider(
+      create: (context) => ProfilePageCubit(),
+      child: BlocBuilder<ProfilePageCubit, ProfilePageState>(
+        builder: (context, state) {
+          if (state is ProfileState) {
+            return Scaffold(
+              appBar: OrganicAppBar(title: 'Профиль'),
+              body: ListView(
+                padding: EdgeInsets.only(
+                  top: 32.h,
+                  left: 16.w,
+                  right: 16.w,
+                  bottom: 21.h,
                 ),
-                SizedBox(width: 5.w),
-                Text('Выйти', style: AppStyles.bodyGrey6),
-              ],
-            ),
-          )
-        ],
+                children: [
+                  Text(_name, style: AppStyles.header4),
+                  SizedBox(height: 3.h),
+                  Text(_phone, style: AppStyles.bodyGrey4),
+                  SizedBox(height: 20.h),
+                  BonusPoints(level: _level, points: _points),
+                  SizedBox(height: 20.h),
+                  ProfileList(),
+                  Expanded(
+                    // Надо исправить ошибку
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        SizedBox(
+                          // Для выравнения строки
+                          height: 26.h,
+                          child: Image.asset('assets/icons/exit.png'),
+                        ),
+                        SizedBox(width: 5.w),
+                        Text('Выйти', style: AppStyles.bodyGrey6),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            );
+          } else
+            return PersonalDataPage();
+        },
       ),
     );
   }

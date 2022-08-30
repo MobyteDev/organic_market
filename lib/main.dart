@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:organic_market/bloc/cart_page_bloc.dart';
 import 'package:organic_market/common/app_colors.dart';
 import 'package:organic_market/common/app_styles.dart';
 import 'package:organic_market/di/locator.dart';
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, __) {
-        return  MaterialApp.router(
+        return MaterialApp.router(
           title: 'Flutter Demo',
           theme: ThemeData(
             appBarTheme: AppBarTheme(

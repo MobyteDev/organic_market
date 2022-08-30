@@ -10,13 +10,14 @@ class OrganicAppBar extends StatelessWidget with PreferredSizeWidget {
   final Widget? prefixIcon; // Иконка перед заголовком
   final bool isBack; // Наличие слева стрелки "назад"
   final List<Widget>? actions; // Иконки справа
-
+  final VoidCallback? onReturn;
   const OrganicAppBar({
     Key? key,
     required this.title,
     this.prefixIcon,
     this.isBack = false,
     this.actions,
+    this.onReturn,
   }) : super(key: key);
 
   @override
@@ -48,6 +49,9 @@ class OrganicAppBar extends StatelessWidget with PreferredSizeWidget {
           ),
           leading: GestureDetector(
             onTap: () {
+              if (onReturn != null) {
+                onReturn!();
+              }
               context.router.pop();
             },
             child: isBack

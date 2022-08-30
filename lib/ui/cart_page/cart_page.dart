@@ -100,33 +100,6 @@ class CartPage extends StatelessWidget {
                 },
               ),
               SizedBox(height: 24.h,),
-              OutlinedButton(
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: AppColors.green149202_1,
-                  foregroundColor: AppColors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                ),
-                onPressed: () {
-                  showModalBottomSheet(
-                    isScrollControlled: true,
-
-                    context: context,
-                    builder: (context) => Wrap(children: [AuthDialog()]),
-                  );
-                },
-                child: SizedBox(
-                  height: 50.h,
-                  width: 1.sw,
-                  child: Center(
-                    child: Text(
-                      "Перейти к оформлению",
-                      style: AppStyles.header1,
-                    ),
-                  ),
-                ),
-              ),
             ],
           ),
         ),

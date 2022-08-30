@@ -20,7 +20,7 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
         appBar: OrganicAppBar(
           title: 'ул. Пушкина 15, д. 20, кв. 113',
           prefixIcon: Image.asset('assets/icons/green_car.png'),
